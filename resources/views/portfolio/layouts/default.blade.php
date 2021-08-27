@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    @include('portfolio.includes.head')
+    @include('portfolio.includes.head2')
 </head>
 
 <body>
