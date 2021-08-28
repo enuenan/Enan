@@ -8,7 +8,7 @@
 
 <!-- Favicons -->
 <link href="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" rel="icon">
-<link href="{{ asset('portfolio/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+{{-- <link href="{{ asset('portfolio/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
 
 <!-- Google Fonts -->
 <link

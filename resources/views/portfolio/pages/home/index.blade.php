@@ -34,7 +34,6 @@
         @include('portfolio.pages.home.section.contact')
         <!-- End Contact Section -->
 
-
     </main>
     <!-- End #main -->
 @endsection
