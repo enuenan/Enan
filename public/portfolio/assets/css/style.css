@@ -1401,13 +1401,13 @@ blockquote {
     }
 
     iframe {
-        width: 450px;
-        height: 300px;
+        width: 450px !important;
+        height: 300px !important;
     }
 
     lottie-player {
-        width: 400px;
-        height: 400px;
+        width: 450px !important;
+        height: 450px !important;
     }
 
     /* Navbar */
@@ -1489,13 +1489,13 @@ blockquote {
 
 @media (max-width: 400px) {
     iframe {
-        width: 380px;
-        height: 300px;
+        width: 380px !important;
+        height: 300px !important;
     }
 
     lottie-player {
-        width: 300px;
-        height: 300px;
+        width: 380px !important;
+        height: 380px !important;
     }
 }
 
@@ -1505,13 +1505,13 @@ blockquote {
 @media (max-width: 320px) {
 
     iframe {
-        width: 300px;
-        height: 250px;
+        width: 300px !important;
+        height: 250px !important;
     }
 
     lottie-player {
-        width: 280px;
-        height: 280px;
+        width: 300px !important;
+        height: 300px !important;
     }
 
     /* Navbar */
