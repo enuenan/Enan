@@ -5,6 +5,7 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 <meta content="#0b6a7d" name="keywords">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 <!-- Favicons -->
 <link href="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" rel="icon">
@@ -25,7 +26,7 @@
 <!-- Template Main CSS File -->
 <link href="{{ asset('portfolio/assets/css/style.css') }}" rel="stylesheet">
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 
 <style>
     i {
