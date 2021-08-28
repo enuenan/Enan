@@ -33,7 +33,7 @@
                                 </a>
                             </li>
                             <li class="mt-4">
-                                <iframe
+                                <iframe class="iframe1"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387.8184267138674!2d91.83992942789568!3d22.369827498827153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad27786bec17ff%3A0x3919bd17e921d9c5!2s616%20Asian%20Housing%20Society%20Rd%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1629467142852!5m2!1sen!2sbd"
                                     width="500" height="350" style="border:10;" allowfullscreen="" loading="lazy">
                                 </iframe>

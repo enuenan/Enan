@@ -1400,7 +1400,7 @@ blockquote {
         background-position: 65% top;
     }
 
-    iframe {
+    .iframe1 {
         width: 450px !important;
         height: 300px !important;
     }
@@ -1488,7 +1488,7 @@ blockquote {
 }
 
 @media (max-width: 400px) {
-    iframe {
+    .iframe1 {
         width: 380px !important;
         height: 300px !important;
     }
@@ -1504,7 +1504,7 @@ blockquote {
  */
 @media (max-width: 320px) {
 
-    iframe {
+    .iframe1 {
         width: 300px !important;
         height: 250px !important;
     }
