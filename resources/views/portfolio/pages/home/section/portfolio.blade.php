@@ -88,12 +88,12 @@
 
             <!-- 5 -->
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="{{ asset('portfolio/assets/img/portfolio/pixomatic_1629477935633.png') }}"
+                <img src="{{ asset('portfolio/assets/img/portfolio/pixomatic_1630229825441.png') }}"
                     class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Cowpik</h4>
                     <p>Cowpik</p>
-                    <a href="{{ asset('portfolio/assets/img/portfolio/pixomatic_1629477935633.png') }}"
+                    <a href="{{ asset('portfolio/assets/img/portfolio/pixomatic_1630229825441.png') }}"
                         data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cowpik"><i
                             class="bx bx-plus"></i></a>
                     <a href="{{ route('cowpik') }}" class="details-link" title="More Details">
