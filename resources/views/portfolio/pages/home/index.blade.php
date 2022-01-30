@@ -16,7 +16,7 @@
 
 
         <!-- ======= Services Section ======= -->
-        {{-- @include('portfolio.pages.home.section.services') --}}
+        @include('portfolio.pages.home.section.services')
         <!-- End Services Section -->
 
 

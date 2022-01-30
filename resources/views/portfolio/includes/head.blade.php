@@ -22,6 +22,8 @@
 <link href="{{ asset('portfolio/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
 <link href="{{ asset('portfolio/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 <link href="{{ asset('portfolio/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 
 <!-- Template Main CSS File -->
 <link href="{{ asset('portfolio/assets/css/style.css') }}" rel="stylesheet">
@@ -31,6 +33,14 @@
 <style>
     i {
         color: #106f17 !important
+    }
+
+    .progress {
+        height: 0.5rem !important;
+    }
+
+    .iconify {
+        font-size: 44px;
     }
 
 </style>
