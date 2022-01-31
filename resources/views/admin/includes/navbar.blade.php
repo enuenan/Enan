@@ -1,8 +1,10 @@
 <div id="header" class="header navbar-default">
     <!-- begin navbar-header -->
     <div class="navbar-header">
-        <a href="{{ route('admin.dashboard') }}" class="navbar-brand"><span class="navbar-logo"></span>
-            <b>Baker's</b> Admin</a>
+        <a href="{{ route('admin.dashboard') }}" class="navbar-brand">
+            <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-fluid" width="20%">
+            Portfolio
+        </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>

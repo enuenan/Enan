@@ -2,10 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SettingsController;
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_enan']], function () {
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::resource('skills', SkillController::class);
 
     // SETTINGS START
     Route::get('settings', [SettingsController::class, 'settings'])->name('settings');

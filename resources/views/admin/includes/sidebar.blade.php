@@ -31,6 +31,14 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+            <li
+                class="has-sub {{ request()->is('admin/skills') ? 'active' : '' }} 
+                {{ request()->is('admin/skills/create') ? 'active' : '' }}
+                {{ request()->is('admin/skills/*/edit') ? 'active' : '' }}">
+                <a href="{{ route('skills.index') }}"><i class="fa fa-th-large"></i>
+                    <span>Skills</span>
+                </a>
+            </li>
 
             {{-- <li class="has-sub">
                 <a href="javascript:;">

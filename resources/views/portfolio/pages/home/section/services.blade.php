@@ -7,7 +7,24 @@
         <div class="services-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
+                @foreach ($skills as $skill)
+                    <div class="swiper-slide">
+                        <div class="services-block">
+                            {!! $skill->icon !!}
+                            <span>{{ $skill->name }}</span>
+                            <p class="separator">
+                                {{ $skill->description }}
+                            </p>
+                            {{-- <div class="progress">
+                            <div class="progress-bar" role="progressbar"
+                                style="width: 75%; background-color: #ff2d20;" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div> --}}
+                        </div>
+                    </div>
+                @endforeach
+
+                <!--<div class="swiper-slide">
                     <div class="services-block">
                         <i class="fa-brands fa-laravel" style="color: #ff2d20 !important;"></i>
                         <span>Laravel</span>
@@ -29,11 +46,11 @@
                         <p class="separator">
                             Know JavaScript at midlevel.
                         </p>
-                        {{-- <div class="progress">
+                        <div class="progress">
                             <div class="progress-bar" role="progressbar"
                                 style="width: 60%; background-color: #f7df1e;" aria-valuenow="60" aria-valuemin="0"
                                 aria-valuemax="100"></div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
 
@@ -45,17 +62,17 @@
                         <p class="separator">
                             Can build web apps with VUE Js. Mid level expert at VUE Js.
                         </p>
-                        {{-- <div class="progress">
+                        <div class="progress">
                             <div class="progress-bar" role="progressbar"
                                 style="width: 50%; background-color: #34495e;" aria-valuenow="50" aria-valuemin="0"
                                 aria-valuemax="100"></div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
                     <div class="services-block">
-                        {{-- <i class="fa-brands fa-shopify" style="color: #95bf47 !important"></i> --}}
+                        <i class="fa-brands fa-shopify" style="color: #95bf47 !important"></i>
                         <span class="iconify" data-icon="logos:shopify"></span>
                         <span>Shopify</span>
                         <p class="separator">
@@ -103,7 +120,7 @@
                             Can design a website with Tailwind.
                         </p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <div class="swiper-pagination"></div>

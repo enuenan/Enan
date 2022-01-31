@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Portfolio;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Skill;
 
 class PortfolioController extends Controller
 {
     public function index()
     {
-        return view('portfolio.pages.home.index');
+        $skills = Skill::all();
+        return view('portfolio.pages.home.index', compact('skills'));
     }
 
     public function edventure()
