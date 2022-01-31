@@ -26,6 +26,11 @@
 
 
         <!-- ======= Personal Work ======= -->
+        @include('portfolio.pages.home.section.company')
+        <!-- End Personal Work -->
+
+
+        <!-- ======= Personal Work ======= -->
         @include('portfolio.pages.home.section.personal-work')
         <!-- End Personal Work -->
 
