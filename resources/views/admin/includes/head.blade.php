@@ -20,6 +20,8 @@
 
 <!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
 @yield('page-css')
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
 <!-- ================== END PAGE LEVEL STYLE ================== -->
 
 <!-- ================== BEGIN BASE JS ================== -->
@@ -28,7 +30,7 @@
 
 <script>
     function previewFile(input) {
-        var file = $("input#banner").get(0).files[0];
+        var file = $("input#image").get(0).files[0];
 
         if (file) {
             var reader = new FileReader();

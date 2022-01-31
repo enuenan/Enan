@@ -32,6 +32,14 @@
                 </a>
             </li>
             <li
+                class="has-sub {{ request()->is('admin/about') ? 'active' : '' }} 
+                {{ request()->is('admin/about/create') ? 'active' : '' }}
+                {{ request()->is('admin/about/*/edit') ? 'active' : '' }}">
+                <a href="{{ route('about.index') }}"><i class="fa fa-th-large"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li
                 class="has-sub {{ request()->is('admin/skills') ? 'active' : '' }} 
                 {{ request()->is('admin/skills/create') ? 'active' : '' }}
                 {{ request()->is('admin/skills/*/edit') ? 'active' : '' }}">

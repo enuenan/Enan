@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers\Portfolio;
 
+use App\Models\Admin\About;
+use App\Models\Admin\Skill;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Admin\Skill;
 
 class PortfolioController extends Controller
 {
     public function index()
     {
         $skills = Skill::all();
-        return view('portfolio.pages.home.index', compact('skills'));
+        $about = About::find(1);
+        return view('portfolio.pages.home.index', compact('skills', 'about'));
     }
 
     public function edventure()

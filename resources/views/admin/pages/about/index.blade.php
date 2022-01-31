@@ -1,7 +1,7 @@
 @extends('admin.layouts.default', [
-'pageName1' => 'All Skills',
+'pageName1' => 'About',
 'pageName2' => '',
-'pageDesc' => ' Skills',
+'pageDesc' => ' About',
 ])
 
 @section('page-css')
@@ -9,22 +9,6 @@
         rel="stylesheet" />
     <link href="{{ asset('website/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css') }}"
         rel="stylesheet" />
-
-    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-    <style>
-        .icon-size {
-            font-size: 44px;
-        }
-
-        .progress {
-            height: 0.5rem !important;
-        }
-
-        .iconify {
-            font-size: 44px;
-        }
-
-    </style>
 @endsection
 
 @section('content')
@@ -41,45 +25,49 @@
         <!-- end panel-heading -->
         <!-- begin panel-body -->
         <div class="panel-body">
-            <a href="{{ route('skills.create') }}">
-                <button class="btn btn-primary float-right">Store</button>
-                <div class="clearfix mb-2"></div>
-            </a>
+            @if (empty($about))
+                <a href="{{ route('about.create') }}">
+                    <button class="btn btn-primary float-right">
+                        <i class="fa-solid fa-plus"></i> About
+                    </button>
+                    <div class="clearfix mb-2"></div>
+                </a>
+            @endif
             <table id="data-table-buttons" class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th width="1%"></th>
-                        <th class="text-nowrap">Icon</th>
-                        <th class="text-nowrap">Name</th>
+                        <th class="text-nowrap">Image</th>
+                        <th class="text-nowrap">Title</th>
                         <th class="text-nowrap">Description</th>
                         <th class="text-nowrap">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($skills as $skill)
+                    @if ($about)
                         <tr class="gradeU">
-                            <td width="1%" class="f-s-600 text-inverse">{{ $loop->iteration }}</td>
-                            <td class="icon-size">{!! $skill->icon !!}</td>
-                            <td>{{ $skill->name }}</td>
-                            <td>{{ $skill->description }}</td>
+                            <td>
+                                <img src="{{ $about->image }}" class="img-thumbnail" alt="">
+                            </td>
+                            <td>{{ $about->title }}</td>
+                            <td>{{ $about->description }}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="{{ route('skills.edit', $skill->id) }}" class="btn btn-primary"><i
+                                    <a href="{{ route('about.edit', $about->id) }}" class="btn btn-primary"><i
                                             class="far fa-edit"></i>
                                     </a>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-danger" data-toggle="modal"
-                                        data-target="#deleteClass{{ $skill->id }}">
+                                        data-target="#deleteClass{{ $about->id }}">
                                         <i class="far fa-trash-alt"></i>
                                     </button>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="deleteClass{{ $skill->id }}" tabindex="-1"
+                                    <div class="modal fade" id="deleteClass{{ $about->id }}" tabindex="-1"
                                         role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Deleting Skill
+                                                    <h5 class="modal-title" id="exampleModalLabel">Deleting about
                                                     </h5>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
@@ -92,8 +80,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-dismiss="modal">Close</button>
-                                                    <form action="{{ route('skills.destroy', $skill->id) }}"
-                                                        method="POST">
+                                                    <form action="{{ route('about.destroy', $about->id) }}" method="POST">
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -105,7 +92,11 @@
                                 </div>
                             </td>
                         </tr>
-                    @endforeach
+                    @else
+                        <tr></tr>
+                    @endif
+
+
                 </tbody>
             </table>
         </div>
