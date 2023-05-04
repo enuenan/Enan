@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'name' => 'Moammer Farshid Enan',
             'email' => 'emoammerfershid@gmail.com',
             'role' => 'is_enan',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('hello_enan_54'),
         ]);
     }
 }

@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\AboutSeeder;
 use Database\Seeders\SkillSeeder;
+use Database\Seeders\CategorySeeder;
+use Database\Seeders\PortfolioSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +23,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AboutSeeder::class,
             SkillSeeder::class,
+            CategorySeeder::class,
+            PortfolioSeeder::class,
         ]);
     }
 }

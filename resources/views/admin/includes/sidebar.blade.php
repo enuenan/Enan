@@ -7,7 +7,7 @@
                 <a href="javascript:;" data-toggle="nav-profile">
                     <div class="cover with-shadow"></div>
                     <div class="image">
-                        <img src="https://dummyimage.com/200x150/d9e0e7/aaa" class="img-thumnail" alt="" height="150"
+                        <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-thumnail" alt="" height="150"
                             width="200">
                     </div>
                     <div class="info">
@@ -47,6 +47,51 @@
                     <span>Skills</span>
                 </a>
             </li>
+            {{-- <li
+                class="has-sub {{ request()->is('admin/portfolios') ? 'active' : '' }} 
+                {{ request()->is('admin/portfolios/create') ? 'active' : '' }}
+                {{ request()->is('admin/portfolios/*/edit') ? 'active' : '' }}">
+                <a href="{{ route('portfolios.index') }}"><i class="fa fa-th-large"></i>
+                    <span>Portfolios</span>
+                </a>
+            </li> --}}
+            <li
+                class="has-sub {{ request()->is('admin/portfolio') ? 'active' : '' }} 
+                        {{ request()->is('admin/portfolio/create') ? 'active' : '' }}
+                        {{ request()->is('admin/portfolio/*/edit') ? 'active' : '' }}
+                        {{ request()->is('admin/category') ? 'active' : '' }} 
+                        {{ request()->is('admin/category/create') ? 'active' : '' }}
+                        {{ request()->is('admin/category/*/edit') ? 'active' : '' }}
+                        ">
+                <a href="javascript:;">
+                    <b class="caret"></b><i class="fa fa-th-large"></i>
+                    <span>Portfolios</span>
+                </a>
+                <ul class="sub-menu">
+                    <li
+                        class="{{ request()->is('admin/category') ? 'active' : '' }} 
+                            {{ request()->is('admin/category/create') ? 'active' : '' }}
+                            {{ request()->is('admin/category/*/edit') ? 'active' : '' }}">
+                        <a href="{{ route('category.index') }}">Category</a>
+                    </li>
+                    <li
+                        class="{{ request()->is('admin/portfolio') ? 'active' : '' }} 
+                            {{ request()->is('admin/portfolio/create') ? 'active' : '' }}
+                            {{ request()->is('admin/portfolio/*/edit') ? 'active' : '' }}">
+                        <a href="{{ route('portfolio.index') }}">
+                            <span>Portfolios</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li
+                class="has-sub {{ request()->is('admin/cv-and-resume') ? 'active' : '' }} 
+                {{ request()->is('admin/cv-and-resume/create') ? 'active' : '' }}
+                {{ request()->is('admin/cv-and-resume/*/edit') ? 'active' : '' }}">
+                <a href="{{ route('cv-and-resume.index') }}"><i class="fa fa-th-large"></i>
+                    <span>CV and Resume</span>
+                </a>
+            </li>
 
             {{-- <li class="has-sub">
                 <a href="javascript:;">
@@ -59,8 +104,7 @@
                 </ul>
             </li> --}}
             <!-- begin sidebar minify button -->
-            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i
-                        class="fa fa-angle-double-left"></i></a></li>
+            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
         </ul>
         <!-- end sidebar nav -->

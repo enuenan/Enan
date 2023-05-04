@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Portfolio;
 use App\Models\Admin\About;
 use App\Models\Admin\Skill;
 use Illuminate\Http\Request;
+use App\Models\Admin\Portfolio;
+use App\Models\Admin\CvAndResume;
 use App\Http\Controllers\Controller;
 
 class PortfolioController extends Controller
@@ -13,7 +15,9 @@ class PortfolioController extends Controller
     {
         $skills = Skill::all();
         $about = About::find(1);
-        return view('portfolio.pages.home.index', compact('skills', 'about'));
+        $portfolios = Portfolio::all();
+        $cv_and_resume = CvAndResume::find(1);
+        return view('portfolio.pages.home.index', compact('skills', 'about', 'portfolios', 'cv_and_resume'));
     }
 
     public function edventure()

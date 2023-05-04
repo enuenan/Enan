@@ -2,7 +2,10 @@
 
     <div class="container">
         <div class="section-title text-center">
-            <h2>Company I have worked for:</h2>
+            <h2>
+                <span class="text-decoration-underline" style="color: #106f17 !important">Company</span>
+                I have worked for:
+            </h2>
         </div>
     </div>
 
@@ -24,9 +27,9 @@
                                     Top5Way
                                 </a>
                             </h4>
-                            {{-- <p class="separator">
-                                To teach laravel other people i developed this website.
-                            </p> --}}
+                            <p class="separator">
+                                June 2020 - Nov 2021
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -45,9 +48,9 @@
                                     Dynamicflowit
                                 </a>
                             </h4>
-                            {{-- <p class="separator">
-                                To teach laravel other people i developed this website.
-                            </p> --}}
+                            <p class="separator">
+                                Sep 2021 - Present
+                            </p>
                         </div>
                     </div>
                 </div>

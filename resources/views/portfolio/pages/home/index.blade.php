@@ -1,6 +1,6 @@
 @extends('portfolio.layouts.default', [
-'title' => 'Portfolio',
-'fixedheader' => '',
+    'title' => 'Portfolio',
+    'fixedheader' => '',
 ])
 
 @section('content')
@@ -27,6 +27,12 @@
 
         <!-- ======= Personal Work ======= -->
         @include('portfolio.pages.home.section.company')
+        <!-- End Personal Work -->
+
+
+
+        <!-- ======= Personal Work ======= -->
+        @include('portfolio.pages.home.section.cv_resume')
         <!-- End Personal Work -->
 
 
