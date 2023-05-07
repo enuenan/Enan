@@ -1,7 +1,7 @@
 @extends('admin.layouts.default', [
-'pageName1' => 'Edit Skill',
-'pageName2' => '',
-'pageDesc' => ' Skill',
+    'pageName1' => 'Edit Portfolio',
+    'pageName2' => '',
+    'pageDesc' => ' Portfolio',
 ])
 
 @section('content')
@@ -13,36 +13,57 @@
                 <!-- begin panel-heading -->
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
-                            data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                     </div>
-                    <h4 class="panel-title">Edit Skill</h4>
+                    <h4 class="panel-title">Edit Portfolio</h4>
                 </div>
                 <!-- end panel-heading -->
                 <!-- begin panel-body -->
                 <div class="panel-body">
-                    <form action="{{ route('skills.update', $skill) }}" method="post">
+                    {{-- Name	Image	Description Title	Description	Category	Client	Project Date	Git Url	Project Url	 --}}
+                    <form action="{{ route('portfolio.update', $portfolio) }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         @method('PUT')
                         <div class="form-group row m-b-15">
-                            <label class="col-form-label col-md-3" for="email">Icon</label>
+                            <label class="col-form-label col-md-3" for="email">Name</label>
                             <div class="col-md-9">
-                                <div id="menu_name_show">
-                                    <input type="text" class="form-control m-b-5" id="icon" name="icon"
-                                        placeholder="Enter icon" value="{{ old('icon') ? old('icon') : $skill->icon }}"
-                                        required />
-                                </div>
-                                @error('icon')
+                                <input type="text" class="form-control m-b-5" id="name" name="name" placeholder="Enter name"
+                                    value="{{ old('name') ? old('name') : $portfolio->name }}" required />
+                                @error('name')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group row m-b-15">
-                            <label class="col-form-label col-md-3" for="email">Name</label>
+                            <label class="col-form-label col-md-3" for="image">Image</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="name" name="name" placeholder="Enter name"
-                                    value="{{ old('name') ? old('name') : $skill->name }}" required />
-                                @error('name')
+                                <div id="menu_name_show">
+                                    <input type="file" class="form-control m-b-5" id="image" name="image" placeholder="Enter image" />
+                                </div>
+                                @error('image')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Category</label>
+                            <div class="col-md-9">
+                                <select class="custom-select" name="category_id">
+                                    <option selected>Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ $category->id == $portfolio->category_id ? 'selected' : '' }}>
+                                            {{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Description Title</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control m-b-5" id="description_title" name="description_title"
+                                    placeholder="Enter description"
+                                    value="{{ old('description_title') ? old('description_title') : $portfolio->description_title }}" required />
+                                @error('description_title')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -50,11 +71,49 @@
                         <div class="form-group row m-b-15">
                             <label class="col-form-label col-md-3" for="email">Description</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="description" name="description"
-                                    placeholder="Enter description"
-                                    value="{{ old('description') ? old('description') : $skill->description }}"
-                                    required />
+                                <input type="text" class="form-control m-b-5" id="description" name="description" placeholder="Enter description"
+                                    value="{{ old('description') ? old('description') : $portfolio->description }}" required />
                                 @error('description')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Client</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control m-b-5" id="client" name="client" placeholder="Enter client"
+                                    value="{{ old('client') ? old('client') : $portfolio->client }}" required />
+                                @error('client')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Project Date</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control m-b-5" id="project_date" name="project_date" placeholder="Enter Project Date"
+                                    value="{{ old('project_date') ? old('project_date') : $portfolio->project_date }}" required />
+                                @error('project_date')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Git URL</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control m-b-5" id="git_url" name="git_url" placeholder="Enter Git URL"
+                                    value="{{ old('git_url') ? old('git_url') : $portfolio->git_url }}" />
+                                @error('git_url')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-3" for="email">Project URL</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control m-b-5" id="project_url" name="project_url" placeholder="Enter Project URL"
+                                    value="{{ old('project_url') ? old('project_url') : $portfolio->project_url }}" />
+                                @error('project_url')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>

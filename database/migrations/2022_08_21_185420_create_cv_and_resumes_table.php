@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('cv_and_resumes', function (Blueprint $table) {
             $table->id();
             $table->boolean("show");
-            $table->string("cv_link")->nullable();
-            $table->string("resume_link")->nullable();
+            $table->string("cv")->nullable();
+            $table->string("resume")->nullable();
             $table->timestamps();
         });
     }

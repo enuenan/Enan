@@ -16,9 +16,50 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="journal-info">
 
-                        <a href="#" target="_blank">
-                            <img src="{{ asset('portfolio/assets/img/top5way.jpg') }}" class="img-responsive"
+                        <a href="https://talentpro.global/" target="_blank">
+                            <img src="{{ asset('portfolio/assets/img/talent_pro.jpeg') }}" class="img-responsive"
                                 style="height: 200px;" alt="img">
+                        </a>
+
+                        <div class="journal-txt">
+                            <h4>
+                                <a href="https://talentpro.global/" target="_blank">
+                                    Talent Pro
+                                </a>
+                            </h4>
+                            <p class="separator">
+                                Nov 2022 - Present
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="journal-info">
+
+                        <a href="http://dynamicflowit.com/" target="_blank">
+                            <img src="{{ asset('portfolio/assets/img/Dynamicflow.png') }}" class="img-responsive" style="height: 200px;"
+                                alt="img">
+                        </a>
+
+                        <div class="journal-txt">
+                            <h4>
+                                <a href="http://dynamicflowit.com/" target="_blank">
+                                    Dynamicflowit
+                                </a>
+                            </h4>
+                            <p class="separator">
+                                Sep 2021 - Nov 2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="journal-info">
+
+                        <a href="#" target="_blank">
+                            <img src="{{ asset('portfolio/assets/img/top5way.jpg') }}" class="img-responsive" style="height: 200px;" alt="img">
                         </a>
 
                         <div class="journal-txt">
@@ -29,27 +70,6 @@
                             </h4>
                             <p class="separator">
                                 June 2020 - Nov 2021
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="journal-info">
-
-                        <a href="http://dynamicflowit.com/" target="_blank">
-                            <img src="{{ asset('portfolio/assets/img/Dynamicflow.png') }}" class="img-responsive"
-                                style="height: 200px;" alt="img">
-                        </a>
-
-                        <div class="journal-txt">
-                            <h4>
-                                <a href="http://dynamicflowit.com/" target="_blank">
-                                    Dynamicflowit
-                                </a>
-                            </h4>
-                            <p class="separator">
-                                Sep 2021 - Present
                             </p>
                         </div>
                     </div>

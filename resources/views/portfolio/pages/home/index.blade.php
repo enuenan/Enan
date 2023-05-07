@@ -32,7 +32,9 @@
 
 
         <!-- ======= Personal Work ======= -->
-        @include('portfolio.pages.home.section.cv_resume')
+
+        {{-- @include('portfolio.pages.home.section.cv_resume') --}}
+
         <!-- End Personal Work -->
 
 

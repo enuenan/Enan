@@ -25,24 +25,44 @@
                         @method('PUT')
 
                         <div class="form-group row m-b-15">
-                            <label class="col-form-label col-md-3" for="email">Cv Link</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="cv_link" name="cv_link" placeholder="Enter cv link src"
-                                    value="{{ old('cv_link') ? old('cv_link') : $cv_and_resume->cv_link }}" required />
-                                @error('cv_link')
+                            <label class="col-form-label col-md-2" for="email">Show</label>
+                            <div class="col-md-6">
+                                <select class="custom-select" name="show">
+                                    <option selected>Change the view mode</option>
+                                    <option value="1" {{ $cv_and_resume->show == 1 ? 'selected' : '' }}>Show</option>
+                                    <option value="0" {{ $cv_and_resume->show == 0 ? 'selected' : '' }}>Hide</option>
+                                </select>
+                                @error('show')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row m-b-15">
-                            <label class="col-form-label col-md-3" for="email">Resume Link</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="resume_link" name="resume_link" placeholder="Enter resume link src"
-                                    value="{{ old('resume_link') ? old('resume_link') : $cv_and_resume->resume_link }}" required />
-                                @error('resume_link')
+                            <label class="col-form-label col-md-2" for="email">Cv</label>
+                            <div class="col-md-6">
+                                <input type="file" class="form-control m-b-5" id="cv" name="cv" placeholder="Enter cv link src"
+                                    value="{{ old('cv') ? old('cv') : $cv_and_resume->cv }}" />
+                                @error('cv')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
+                            </div>
+                            <div class="col-md-4">
+                                <iframe src="{{ $cv_and_resume->cv }}" class="w-100" height="550"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="form-group row m-b-15">
+                            <label class="col-form-label col-md-2" for="email">Resume</label>
+                            <div class="col-md-6">
+                                <input type="file" class="form-control m-b-5" id="resume" name="resume" placeholder="Enter resume link src"
+                                    value="{{ old('resume') ? old('resume') : $cv_and_resume->resume }}" />
+                                @error('resume')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="col-md-4">
+                                <iframe src="{{ $cv_and_resume->resume }}" class="w-100" height="550"></iframe>
                             </div>
                         </div>
                         <div class="row m-b-15">

@@ -23,12 +23,14 @@
                     <form action="{{ route('cv-and-resume.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
+                        <input type="text" name="show" value="1" hidden id="">
+
                         <div class="form-group row m-b-15">
                             <label class="col-form-label col-md-3" for="email">Cv Link</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="cv_link" name="cv_link" placeholder="Enter cv link src"
-                                    value="{{ old('cv_link') ? old('cv_link') : '' }}" required />
-                                @error('cv_link')
+                                <input type="file" class="form-control m-b-5" id="cv" name="cv" placeholder="Enter cv link src"
+                                    value="{{ old('cv') ? old('cv') : '' }}" required />
+                                @error('cv')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -37,9 +39,9 @@
                         <div class="form-group row m-b-15">
                             <label class="col-form-label col-md-3" for="email">Resume Link</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control m-b-5" id="resume_link" name="resume_link" placeholder="Enter resume link src"
-                                    value="{{ old('resume_link') ? old('resume_link') : '' }}" required />
-                                @error('resume_link')
+                                <input type="file" class="form-control m-b-5" id="resume" name="resume" placeholder="Enter resume link src"
+                                    value="{{ old('resume') ? old('resume') : '' }}" required />
+                                @error('resume')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>

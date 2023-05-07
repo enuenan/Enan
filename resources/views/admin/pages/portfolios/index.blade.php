@@ -49,7 +49,9 @@
                         <tr class="gradeU">
                             <td width="1%" class="f-s-600 text-inverse">{{ $loop->iteration }}</td>
                             <td>{{ $portfolio->name }}</td>
-                            <td>{{ $portfolio->image }}</td>
+                            <td>
+                                <img src="{{ $portfolio->image }}" class="img-thumbnail" alt="">
+                            </td>
                             <td>{{ $portfolio->description_title }}</td>
                             <td>{{ $portfolio->description }}</td>
                             <td>{{ $portfolio->category ? $portfolio->category->name : '' }}</td>
@@ -81,7 +83,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Deleting Skill
+                                                    <h5 class="modal-title" id="exampleModalLabel">Deleting Portfolio
                                                     </h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>

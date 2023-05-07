@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Admin\Portfolio;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Category;
+use Illuminate\Support\Facades\Storage;
 
 class PortfolioController extends Controller
 {
@@ -26,7 +29,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.portfolios.create');
+        $categories = Category::all();
+        return view('admin.pages.portfolios.create', compact('categories'));
     }
 
     /**
@@ -40,7 +44,7 @@ class PortfolioController extends Controller
         $portfolio = new Portfolio();
         $this->saveData($portfolio, $request);
 
-        return redirect()->route('portfolios.index')->with(['success' => 'Inserted successfully']);
+        return redirect()->route('portfolio.index')->with(['success' => 'Inserted successfully']);
     }
 
     /**
@@ -62,7 +66,8 @@ class PortfolioController extends Controller
      */
     public function edit(Portfolio $portfolio)
     {
-        return view('admin.pages.portfolios.edit', compact('skill'));
+        $categories = Category::all();
+        return view('admin.pages.portfolios.edit', compact('portfolio', 'categories'));
     }
 
     /**
@@ -76,7 +81,7 @@ class PortfolioController extends Controller
     {
         $this->saveData($portfolio, $request);
 
-        return redirect()->route('portfolios.index')->with(['success' => 'Updated successfully']);
+        return redirect()->route('portfolio.index')->with(['success' => 'Updated successfully']);
     }
 
     /**
@@ -93,9 +98,19 @@ class PortfolioController extends Controller
 
     public function saveData($portfolio, $request)
     {
-        $portfolio->icon = $request->icon;
         $portfolio->name = $request->name;
+        $portfolio->slug = Str::slug($request->name);
+        if ($request->hasFile('image')) {
+            $portfolio->image = Storage::url($request->image->store('public/portfolio'));
+        }
+
+        $portfolio->description_title = $request->description_title;
         $portfolio->description = $request->description;
+        $portfolio->client = $request->client;
+        $portfolio->project_date = $request->project_date;
+        $portfolio->git_url = $request->git_url;
+        $portfolio->project_url = $request->project_url;
+        $portfolio->category_id = $request->category_id;
 
         $portfolio->save();
     }

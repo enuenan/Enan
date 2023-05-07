@@ -16,8 +16,8 @@
         <!-- begin panel-heading -->
         <div class="panel-heading">
             <div class="panel-heading-btn">
-                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i
-                        class="fa fa-minus"></i>
+                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse">
+                    <i class="fa fa-minus"></i>
                 </a>
             </div>
             <h4 class="panel-title">All Categories</h4>

@@ -12,17 +12,19 @@
 
         <div class="row portfolio-container">
 
-            <!-- CV -->
-            <div class="col-md-6">
-                <h3>CV</h3>
-                <iframe src="" class="w-100" height="780"></iframe>
-            </div>
+            @if ($cv_and_resume)
+                <!-- CV -->
+                <div class="col-md-6">
+                    <h3>CV</h3>
+                    <iframe src="{{ $cv_and_resume->cv }}" class="w-100" height="780"></iframe>
+                </div>
 
-            {{-- RESUME --}}
-            <div class="col-md-6">
-                <h3>Resume</h3>
-                <iframe src="" class="w-100" height="780"></iframe>
-            </div>
+                {{-- RESUME --}}
+                <div class="col-md-6">
+                    <h3>Resume</h3>
+                    <iframe src="{{ $cv_and_resume->resume }}" class="w-100" height="780"></iframe>
+                </div>
+            @endif
 
         </div>
     </div>

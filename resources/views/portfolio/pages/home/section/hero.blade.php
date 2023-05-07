@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/enuenan/?hl=en" target="_blank">
+                    <a href="https://www.instagram.com/__ennaaaa__/" target="_blank">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </li>

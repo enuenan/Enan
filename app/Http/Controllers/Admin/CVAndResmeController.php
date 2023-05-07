@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Models\Admin\CvAndResume;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class CVAndResmeController extends Controller
 {
@@ -37,8 +38,21 @@ class CVAndResmeController extends Controller
      */
     public function store(Request $request)
     {
-        $cv_and_resume = new CvAndResume();
-        $this->saveData($cv_and_resume, $request);
+        $cv_and_resume = CvAndResume::latest()->first();
+        if (!$cv_and_resume) {
+            $cv_and_resume = new CvAndResume();
+        }
+        if ($request->hasFile('cv')) {
+            $cv = Storage::url($request->cv->store('public/cv_and_resume'));
+        } else {
+            $cv = null;
+        }
+        if ($request->hasFile('resume')) {
+            $resume = Storage::url($request->resume->store('public/cv_and_resume'));
+        } else {
+            $resume = null;
+        }
+        $this->saveData($cv_and_resume, $request, $cv, $resume);
 
         return redirect()->route('cv-and-resume.index')->with(['success' => 'Inserted successfully']);
     }
@@ -74,7 +88,18 @@ class CVAndResmeController extends Controller
      */
     public function update(Request $request, CvAndResume $cv_and_resume)
     {
-        $this->saveData($cv_and_resume, $request);
+        if ($request->hasFile('cv')) {
+            $cv = Storage::url($request->cv->store('public/cv_and_resume'));
+        } else {
+            $cv = null;
+        }
+        if ($request->hasFile('resume')) {
+            $resume = Storage::url($request->resume->store('public/cv_and_resume'));
+        } else {
+            $resume = null;
+        }
+        $this->saveData($cv_and_resume, $request, $cv, $resume);
+        // $this->saveData($cv_and_resume, $request, $cv_and_resume->cv, $cv_and_resume->resume);
 
         return redirect()->route('cv-and-resume.index')->with(['success' => 'Updated successfully']);
     }
@@ -91,11 +116,15 @@ class CVAndResmeController extends Controller
         return redirect()->back()->with(['success' => 'Deleted successfully']);
     }
 
-    public function saveData($cv_and_resume, $request)
+    public function saveData($cv_and_resume, $request, $cv, $resume)
     {
-        $cv_and_resume->show = 1;
-        $cv_and_resume->cv_link = $request->cv_link;
-        $cv_and_resume->resume_link = $request->resume_link;
+        $cv_and_resume->show = $request->show;
+        if ($cv) {
+            $cv_and_resume->cv = $cv;
+        }
+        if ($resume) {
+            $cv_and_resume->resume = $resume;
+        }
 
         $cv_and_resume->save();
     }

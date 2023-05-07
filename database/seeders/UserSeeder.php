@@ -15,11 +15,21 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Moammer Farshid Enan',
-            'email' => 'emoammerfershid@gmail.com',
-            'role' => 'is_enan',
-            'password' => Hash::make('hello_enan_54'),
-        ]);
+        User::insert(
+            [
+                [
+                    'name' => 'Moammer Farshid Enan',
+                    'email' => 'emoammerfershid@gmail.com',
+                    'role' => 'is_enan',
+                    'password' => Hash::make('hello_enan_54'),
+                ],
+                [
+                    'name' => 'Moammer Farshid Enan',
+                    'email' => 'admin@app.com',
+                    'role' => 'is_enan',
+                    'password' => Hash::make('password'),
+                ]
+            ]
+        );
     }
 }
