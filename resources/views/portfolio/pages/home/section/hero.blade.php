@@ -1,4 +1,4 @@
-<div id="hero" class="home">
+<div id="hero" class="home md:d-none">
     <div class="container">
         <div class="hero-content">
             <h1 style="color: #0b6a7d !important">I'm <span class="typed" data-typed-items="Moammer Farshid Enan, Laravel Web Developer"></span>

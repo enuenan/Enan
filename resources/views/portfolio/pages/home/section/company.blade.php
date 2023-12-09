@@ -16,12 +16,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="journal-info">
 
-                        <a href="https://talentpro.global/" target="_blank">
-                            <img src="{{ asset('portfolio/assets/img/talent_pro.jpeg') }}" class="img-responsive"
-                                style="height: 200px;" alt="img">
-                        </a>
+                        <div class="glass">
+                            <a href="https://talentpro.global/" target="_blank">
+                                <img src="{{ asset('portfolio/assets/img/talent_pro-removedbg.png') }}" class="img-responsive mx-auto d-block"
+                                    style="height: 200px;" alt="img">
+                            </a>
+                        </div>
 
-                        <div class="journal-txt">
+                        <div class="journal-txt text-center">
                             <h4>
                                 <a href="https://talentpro.global/" target="_blank">
                                     Talent Pro
@@ -37,12 +39,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="journal-info">
 
-                        <a href="http://dynamicflowit.com/" target="_blank">
-                            <img src="{{ asset('portfolio/assets/img/Dynamicflow.png') }}" class="img-responsive" style="height: 200px;"
-                                alt="img">
-                        </a>
+                        <div class="glass">
+                            <a href="http://dynamicflowit.com/" target="_blank">
+                                <img src="{{ asset('portfolio/assets/img/Dynamicflow.png') }}" class="img-responsive mx-auto d-block"
+                                    style="height: 200px;" alt="img">
+                            </a>
+                        </div>
 
-                        <div class="journal-txt">
+                        <div class="journal-txt text-center">
                             <h4>
                                 <a href="http://dynamicflowit.com/" target="_blank">
                                     Dynamicflowit
@@ -58,11 +62,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="journal-info">
 
-                        <a href="#" target="_blank">
-                            <img src="{{ asset('portfolio/assets/img/top5way.jpg') }}" class="img-responsive" style="height: 200px;" alt="img">
-                        </a>
+                        <div class="glass">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('portfolio/assets/img/top5way.jpg') }}" class="img-responsive mx-auto d-block"
+                                    style="height: 200px;" alt="img">
+                            </a>
+                        </div>
 
-                        <div class="journal-txt">
+                        <div class="journal-txt text-center">
                             <h4>
                                 <a href="#" target="_blank">
                                     Top5Way

@@ -26,9 +26,14 @@ class SkillSeeder extends Seeder
                 'description' => 'Know JavaScript at midlevel.',
             ],
             [
-                'icon' => '<span class="iconify" data-icon="cib:vue-js"></span>',
+                'icon' => '<i class="fa-brands fa-vuejs fa-lg" style="color: #41b879;"></i>',
                 'name' => 'VUE js',
                 'description' => 'Can build web apps with VUE Js. Mid level expert at VUE Js.',
+            ],
+            [
+                'icon' => '<i class="fa-brands fa-react fa-lg" style="color: #61dbfb;"></i>',
+                'name' => 'React js',
+                'description' => 'Can build web apps with React Js. Mid level expert at React Js.',
             ],
             [
                 'icon' => '<span class="iconify" data-icon="logos:shopify"></span>',

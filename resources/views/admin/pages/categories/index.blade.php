@@ -5,9 +5,9 @@
 ])
 
 @section('page-css')
-    <link href="{{ asset('website/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css') }}"
+    <link href="{{ asset('admin/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css') }}"
         rel="stylesheet" />
-    <link href="{{ asset('website/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css') }}"
+    <link href="{{ asset('admin/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css') }}"
         rel="stylesheet" />
 @endsection
 
@@ -99,6 +99,6 @@
 @endsection
 
 @section('page-js')
-    <script src="{{ asset('website/assets/plugins/DataTables/media/js/jquery.dataTables.js') }}"></script>
-    <script src="{{ asset('website/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/DataTables/media/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js') }}"></script>
 @endsection

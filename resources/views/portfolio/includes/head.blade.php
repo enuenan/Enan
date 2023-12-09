@@ -43,4 +43,11 @@
         font-size: 44px;
     }
 
+    .glass {
+        backdrop-filter: blur(12px) saturate(105%);
+        -webkit-backdrop-filter: blur(12px) saturate(105%);
+        background-color: rgba(16, 111, 23, 0.07);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    }
 </style>

@@ -30,7 +30,7 @@
                         <a href="{{ $portfolio->image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="eDventure">
                             <i class="bx bx-plus"></i>
                         </a>
-                        <a href="{{ route('edventure') }}" class="details-link" title="More Details">
+                        <a href="{{ $portfolio->project_url }}" class="details-link" title="More Details">
                             <i class="bx bx-link"></i>
                         </a>
                     </div>
