@@ -14,13 +14,13 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="journal-info">
 
-                        <a href="https://learn-laravel-with-enan.herokuapp.com/" target="_blank">
+                        <a href="https://learn-laravel-with-enan.moammer-enan.com/" target="_blank">
                             <img src="{{ asset('portfolio/assets/img/Photo_1625506961500.jpg') }}" class="img-responsive" alt="img">
                         </a>
 
                         <div class="journal-txt">
                             <h4>
-                                <a href="https://learn-laravel-with-enan.herokuapp.com/" target="_blank">
+                                <a href="https://learn-laravel-with-enan.moammer-enan.com/" target="_blank">
                                     Learn Laravel With Enan
                                 </a>
                             </h4>

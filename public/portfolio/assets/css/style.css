@@ -452,7 +452,7 @@ p {
 # Hero
 --------------------------------------------------------------*/
 #hero {
-    background: url("../img/pixomatic_1683558356456.png") no-repeat scroll center center/cover;
+    background: url("../img/imgonline-com-ua-retouch-h8qj9vhVGszy.jpg") no-repeat scroll center center/cover;
     /* height: 100vh; */
     /* width: 100%; */
     background-position: top;
@@ -1420,11 +1420,8 @@ blockquote {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    lottie-player {
-        width: 400px !important;
-        height: 450px !important;
-    }
 
+    lottie-player,
     .iframe1 {
         width: 400px !important;
         height: 350px !important;
@@ -1442,14 +1439,10 @@ blockquote {
         background-size: contain;
     }
 
+    lottie-player,
     .iframe1 {
-        width: 400px !important;
+        width: 380px !important;
         height: 300px !important;
-    }
-
-    lottie-player {
-        width: 400px !important;
-        height: 450px !important;
     }
 
     /* Navbar */
@@ -1542,14 +1535,11 @@ blockquote {
 }
 
 @media (max-width: 400px) {
-    .iframe1 {
-        width: 380px !important;
-        height: 300px !important;
-    }
 
-    lottie-player {
-        width: 380px !important;
-        height: 380px !important;
+    lottie-player,
+    .iframe1 {
+        width: 350px !important;
+        height: 300px !important;
     }
 }
 
@@ -1558,14 +1548,10 @@ blockquote {
  */
 @media (max-width: 320px) {
 
+    lottie-player,
     .iframe1 {
         width: 300px !important;
         height: 250px !important;
-    }
-
-    lottie-player {
-        width: 300px !important;
-        height: 300px !important;
     }
 
     /* Navbar */

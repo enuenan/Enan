@@ -2,10 +2,15 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 <title>Moammer Farshid Enan - {{ $title }}</title>
-<meta content="" name="description">
-<meta content="" name="keywords">
-<meta content="#0b6a7d" name="keywords">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="description" content="I'm a Laravel Web Developer who loves clean, simple, secure easily maintainable, modular codes.">
+<meta name="keywords" content="Laravel, Developer, Bangladeshi Laravel Developer, Website Developer, Laravel Developer, Best Laravel Developer, Programmer, PHP Framework, Laravel Website Developer, HTML, CSS, Shopify Developer, Bangladeshi Web Developer">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="10 days">
+<meta name="author" content="Moammer Farshid Enan">
+<meta name="theme-color" content="#0b6a7d">
 
 <!-- Favicons -->
 <link href="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" rel="icon">
