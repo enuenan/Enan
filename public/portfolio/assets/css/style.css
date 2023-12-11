@@ -1249,6 +1249,15 @@ blockquote {
 /** Width between 767px to 0
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+@media (min-width: 767px) {
+    .setup-margin-even {
+        padding-left: 40px;
+    }
+}
+
+/** Width between 767px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
 @media (max-width: 767px) {
 
     #hero .hero-content {
