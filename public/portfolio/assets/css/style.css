@@ -1231,6 +1231,21 @@ blockquote {
     }
 }
 
+/** Width between 991px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (max-width: 991px) {
+    .custom-style-company {
+        padding: 15px 0 0 20px;
+    }
+
+    .custom-style-company a {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 /** Width between 767px to 0
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
@@ -1416,6 +1431,12 @@ blockquote {
         align-items: flex-start !important;
         justify-content: flex-end !important;
         flex-direction: column !important;
+    }
+
+    lottie-player,
+    .iframe1 {
+        width: 400px !important;
+        height: 350px !important;
     }
 }
 

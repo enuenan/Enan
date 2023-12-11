@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="journal-block">
             <div class="row">
 
@@ -83,5 +83,9 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+
+    <div class="container py-4">
+        @include('portfolio.includes.companies.timeline')
     </div>
 </div>
