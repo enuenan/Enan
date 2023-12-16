@@ -25,17 +25,16 @@
         <!-- End Portfolio Section -->
 
 
-        <!-- ======= Personal Work ======= -->
+        <!-- ======= Company ======= -->
         @include('portfolio.pages.home.section.company')
-        <!-- End Personal Work -->
+        <!-- End Company -->
 
 
-
-        <!-- ======= Personal Work ======= -->
+        <!-- ======= CV AND RESUME ======= -->
 
         {{-- @include('portfolio.pages.home.section.cv_resume') --}}
 
-        <!-- End Personal Work -->
+        <!-- End CV AND RESUME -->
 
 
         <!-- ======= Personal Work ======= -->
