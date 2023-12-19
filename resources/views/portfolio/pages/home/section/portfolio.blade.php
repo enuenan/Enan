@@ -19,11 +19,12 @@
             </div>
         </div>
 
-        <div class="row portfolio-container">
+
+        {{-- <div class="row portfolio-container">
 
             @foreach ($portfolios as $portfolio)
-                <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $portfolio->category ? $portfolio->category->name : 'no-category' }}">
-                    <img src="{{ $portfolio->image }}" class="img-fluid" alt="">
+                <div class="col-lg-4 col-md-6 glass portfolio-item filter-{{ $portfolio->category ? $portfolio->category->name : 'no-category' }}">
+                    <img src="{{ $portfolio->image }}" class="img-fluid my-2" alt="">
                     <div class="portfolio-info">
                         <h4>{{ $portfolio->name }}</h4>
                         <p>{{ $portfolio->name }}</p>
@@ -36,6 +37,29 @@
                     </div>
                 </div>
             @endforeach
+        </div> --}}
+
+        <div class="container mx-auto">
+            <div class="journal-block">
+                <div class="row portfolio-container d-flex gap-2 justify-content-center">
+                    @foreach ($portfolios as $portfolio)
+                        <div
+                            class="col-lg-4 col-md-6 glass portfolio-item filter-{{ $portfolio->category ? $portfolio->category->name : 'no-category' }}">
+                            <img src="{{ $portfolio->image }}" class="img-fluid mt-2" alt="">
+                            <div class="journal-txt pt-4 ps-1">
+                                <h4>
+                                    <a href="http://www.edventurebd.com/" target="_blank">
+                                        {{ $portfolio->name }} <i class="fa-solid fa-up-right-from-square"></i>
+                                    </a>
+                                </h4>
+                                <p class="separator">
+                                    {{ $portfolio->description_title }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 </div>
