@@ -77,6 +77,18 @@ class PortfolioSeeder extends Seeder
                 'git_url' => 'https://github.com/srshubho/dfms',
                 'project_url' => '',
             ],
+            [
+                'name' => 'GMIT Academy',
+                'slug' => Str::slug('gmit-academy'),
+                'image' => '/storage/portfolio/gmit.png',
+                'description_title' => 'An online learning platform system',
+                'description' => 'Implemented an online course provider aimed at students. Allows admin to upload lectures, online tests and obtain results online. Allows students to view lectures, participate in exams and feedback left by the teacher on assignments and tests',
+                'category_id' => 1,
+                'client' => 'GMIT',
+                'project_date' => 'Feb 2024 - Nov 2024',
+                'git_url' => 'https://github.com/enuenan/global_mission_it',
+                'project_url' => 'https://gmit.academy/',
+            ],
         ];
 
         foreach ($portfolios as $portfolio) {

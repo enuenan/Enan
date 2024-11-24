@@ -51,8 +51,10 @@
                                 <select class="custom-select" name="category_id">
                                     <option selected>Select Category</option>
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" {{ $category->id == $portfolio->category_id ? 'selected' : '' }}>
-                                            {{ $category->name }}</option>
+                                        <option value="{{ $category->id }}"
+                                            {{ old('category_id', $portfolio->category_id) == $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
