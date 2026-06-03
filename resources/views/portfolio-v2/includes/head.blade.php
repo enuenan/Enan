@@ -1,6 +1,5 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
 <title>Moammer Farshid Enan - {{ $title }}</title>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="description"
@@ -12,19 +11,15 @@
 <meta name="language" content="English">
 <meta name="revisit-after" content="10 days">
 <meta name="author" content="Moammer Farshid Enan">
-<meta name="theme-color" content="#106f17">
+<meta name="theme-color" content="#0f766e">
 
 <link href="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" rel="icon">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;900&display=swap"
     rel="stylesheet">
 
-{{-- Tailwind CSS v4 browser build. For production, prefer compiling through Vite. --}}
-{{--
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 {{-- Icon libraries kept because existing DB/content outputs Bootstrap Icons, Boxicons, FontAwesome, and Iconify markup.
@@ -39,36 +34,26 @@
 <link href="{{ asset('portfolio/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<style type="text/tailwindcss">
-    @theme {
-        --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-        --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
-        --color-brand: #106f17;
-        --color-brand-dark: #0b6a7d;
+<style>
+    html {
+        scroll-behavior: smooth;
     }
 
-    @layer base {
-        html { scroll-behavior: smooth; }
-        body { @apply bg-white font-sans text-[15px] font-light leading-7 tracking-[0.02em] text-zinc-500 overflow-x-hidden; }
-        a { @apply transition duration-300; }
-        i { @apply text-brand; }
-        ::-webkit-scrollbar { width: 0; }
+    ::-webkit-scrollbar {
+        width: 0;
     }
 
-    @layer components {
-        .section-padding { @apply py-20 md:py-28; }
-        .container-site { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
-        .section-title { @apply mb-12 text-center md:mb-16; }
-        .section-title h2 { @apply text-2xl font-semibold uppercase tracking-[0.18em] text-zinc-900 md:text-3xl; }
-        .title-accent { @apply underline decoration-brand decoration-4 underline-offset-8 text-brand; }
-        .glass-card { @apply rounded-3xl border border-white/70 bg-white/65 shadow-xl shadow-zinc-200/70 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl; }
-        .nav-link { @apply text-sm font-medium text-brand hover:text-brand-dark; }
-        .icon-circle { @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand/15 bg-brand/5 text-xl text-brand transition hover:-translate-y-1 hover:bg-brand hover:text-white; }
-        .icon-circle i { @apply text-inherit; }
-        .filter-chip { @apply cursor-pointer rounded-full border border-brand/15 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 transition hover:border-brand hover:bg-brand hover:text-white; }
-        .filter-active { @apply border-brand bg-brand text-white; }
-        .back-to-top { @apply invisible fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-brand text-white opacity-0 shadow-lg transition; }
-        .back-to-top.active { @apply visible opacity-100; }
-        .back-to-top i { @apply text-3xl text-white; }
+    .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.7) !important;
+        opacity: 1 !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #6ee7b7 !important;
+    }
+
+    .filter-active {
+        background: #6ee7b7;
+        color: #020617;
     }
 </style>

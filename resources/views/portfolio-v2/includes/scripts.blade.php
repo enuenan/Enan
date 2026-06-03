@@ -25,8 +25,15 @@
         }
 
         const onScroll = function () {
-            if (backToTop) backToTop.classList.toggle('active', window.scrollY > 250);
-            if (header) header.classList.toggle('shadow-lg', window.scrollY > 20);
+            if (backToTop) {
+                backToTop.classList.toggle('invisible', window.scrollY <= 250);
+                backToTop.classList.toggle('opacity-0', window.scrollY <= 250);
+                backToTop.classList.toggle('opacity-100', window.scrollY > 250);
+            }
+            if (header) {
+                header.classList.toggle('py-2', window.scrollY > 20);
+                header.classList.toggle('py-4', window.scrollY <= 20);
+            }
         };
         document.addEventListener('scroll', onScroll);
         onScroll();
@@ -44,13 +51,17 @@
 
         if (window.Swiper && document.querySelector('.services-slider')) {
             new Swiper('.services-slider', {
-                speed: 600,
+                speed: 700,
                 loop: true,
-                autoplay: { delay: 3500, disableOnInteraction: false },
+                autoplay: { delay: 3200, disableOnInteraction: false },
                 slidesPerView: 1,
                 spaceBetween: 24,
                 pagination: { el: '.swiper-pagination', clickable: true },
-                breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } }
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                    1280: { slidesPerView: 4 }
+                }
             });
         }
 
@@ -58,14 +69,20 @@
             const iso = new Isotope('.portfolio-container', { itemSelector: '.portfolio-item', layoutMode: 'fitRows' });
             document.querySelectorAll('#portfolio-flters li').forEach(function (filter) {
                 filter.addEventListener('click', function () {
-                    document.querySelectorAll('#portfolio-flters li').forEach(item => item.classList.remove('filter-active'));
-                    this.classList.add('filter-active');
+                    document.querySelectorAll('#portfolio-flters li').forEach(function (item) {
+                        item.classList.remove('filter-active', 'bg-emerald-300', 'text-slate-950');
+                        item.classList.add('text-slate-300');
+                    });
+                    this.classList.add('filter-active', 'bg-emerald-300', 'text-slate-950');
+                    this.classList.remove('text-slate-300');
                     iso.arrange({ filter: this.getAttribute('data-filter') });
                 });
             });
         }
 
-        if (window.GLightbox) GLightbox({ selector: '.portfolio-lightbox' });
+        if (window.GLightbox) {
+            GLightbox({ selector: '.portfolio-lightbox' });
+        }
     });
 </script>
 
