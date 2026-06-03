@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    @include('portfolio.includes.head')
+    @include(config('portfolio.view_namespace', 'portfolio') . '::includes.head')
 </head>
 
 <body>
 
     <!-- ======= Header ======= -->
-    @include('portfolio.includes.header')
+    @include(config('portfolio.view_namespace', 'portfolio') . '::includes.header')
     <!-- End Header -->
 
     @yield('content')
@@ -18,10 +18,10 @@
     </a>
 
     <!-- ======= Footer ======= -->
-    @include('portfolio.includes.footer')
+    @include(config('portfolio.view_namespace', 'portfolio') . '::includes.footer')
     <!-- End Footer -->
 
-    @include('portfolio.includes.scripts')
+    @include(config('portfolio.view_namespace', 'portfolio') . '::includes.scripts')
 </body>
 
 </html>
