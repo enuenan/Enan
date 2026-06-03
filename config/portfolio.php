@@ -14,6 +14,6 @@ return [
     | View Base Path
     |--------------------------------------------------------------------------
     */
-    'portfolio_base_path' => resource_path('views/portfolios/v1'),
+    'portfolio_base_path' => resource_path('views/portfolios/' . env('CURRENT_PORTFOLIO_VERSION', 'v2')),
 
 ];
