@@ -1,30 +1,30 @@
 @php
-    $companies = collect([
-        [
-            'image' => 'portfolio/assets/img/talent_pro-removedbg.png',
-            'name' => 'Talent Pro',
-            'link' => 'https://talentpro.global/',
-            'period' => 'Nov 2022 - Present',
-            'worked_as' => 'Laravel Backend',
-            'keywords' => 'Laravel, Inertia, React, MySQL',
-        ],
-        [
-            'image' => 'portfolio/assets/img/Dynamicflow.png',
-            'name' => 'Dynamicflowit',
-            'link' => 'https://dynamicflowit.com/',
-            'period' => 'Sep 2021 - Oct 2022',
-            'worked_as' => 'Fullstack',
-            'keywords' => 'Laravel, Shopify, Craft CMS, MySQL, Maizzle, React',
-        ],
-        [
-            'image' => 'portfolio/assets/img/top5way.jpg',
-            'name' => 'Top5Way',
-            'link' => 'https://www.top5way.com/',
-            'period' => 'June 2020 - Nov 2021',
-            'worked_as' => 'Fullstack',
-            'keywords' => 'Laravel, Livewire, MySQL',
-        ],
-    ]);
+$companiesData = $companies ?? collect([
+    [
+        'image' => 'portfolio/assets/img/talent_pro-removedbg.png',
+        'name' => 'Talent Pro',
+        'link' => 'https://talentpro.global/',
+        'period' => 'Nov 2022 - Present',
+        'worked_as' => 'Laravel Backend',
+        'keywords' => 'Laravel, Inertia, React, MySQL',
+    ],
+    [
+        'image' => 'portfolio/assets/img/Dynamicflow.png',
+        'name' => 'Dynamicflowit',
+        'link' => 'https://dynamicflowit.com/',
+        'period' => 'Sep 2021 - Oct 2022',
+        'worked_as' => 'Fullstack',
+        'keywords' => 'Laravel, Shopify, Craft CMS, MySQL, Maizzle, React',
+    ],
+    [
+        'image' => 'portfolio/assets/img/top5way.jpg',
+        'name' => 'Top5Way',
+        'link' => 'https://www.top5way.com/',
+        'period' => 'June 2020 - Nov 2021',
+        'worked_as' => 'Fullstack',
+        'keywords' => 'Laravel, Livewire, MySQL',
+    ],
+]);
 @endphp
 
 <section id="companies" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -38,8 +38,8 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            @foreach ($companies as $company)
-                <article class="group rounded-[2rem] border-2 border-neutral-950 bg-white p-6 shadow-[8px_8px_0_#111827] transition hover:-translate-y-2 {{ $loop->first ? 'bg-lime-100' : '' }}">
+            @foreach ($companiesData as $company)
+                <article class="group rounded-4xl border-2 border-neutral-950 bg-white p-6 shadow-[8px_8px_0_#111827] transition hover:-translate-y-2 {{ $loop->first ? 'bg-lime-100' : '' }}">
                     <a href="{{ $company['link'] }}" target="_blank" class="flex h-56 items-center justify-center rounded-[1.5rem] border-2 border-neutral-950 bg-[#fffaf0] p-8 transition group-hover:bg-cyan-100">
                         <img src="{{ asset($company['image']) }}" class="max-h-40 w-auto object-contain" alt="{{ $company['name'] }}">
                     </a>

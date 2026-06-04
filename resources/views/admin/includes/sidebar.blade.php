@@ -7,8 +7,8 @@
                 <a href="javascript:;" data-toggle="nav-profile">
                     <div class="cover with-shadow"></div>
                     <div class="image">
-                        <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-thumnail" alt="" height="150"
-                            width="200">
+                        <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-thumnail" alt=""
+                            height="150" width="200">
                     </div>
                     <div class="info">
                         <b class="caret pull-right"></b>
@@ -31,32 +31,35 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li
-                class="has-sub {{ request()->is('admin/about') ? 'active' : '' }} 
+            <li class="has-sub {{ request()->is('admin/about') ? 'active' : '' }} 
                 {{ request()->is('admin/about/create') ? 'active' : '' }}
                 {{ request()->is('admin/about/*/edit') ? 'active' : '' }}">
                 <a href="{{ route('about.index') }}"><i class="fa fa-th-large"></i>
                     <span>About</span>
                 </a>
             </li>
-            <li
-                class="has-sub {{ request()->is('admin/skills') ? 'active' : '' }} 
+            <li class="has-sub {{ request()->is('admin/companies') ? 'active' : '' }} 
+                {{ request()->is('admin/companies/create') ? 'active' : '' }}
+                {{ request()->is('admin/companies/*/edit') ? 'active' : '' }}">
+                <a href="{{ route('companies.index') }}"><i class="fa fa-th-large"></i>
+                    <span>Company</span>
+                </a>
+            </li>
+            <li class="has-sub {{ request()->is('admin/skills') ? 'active' : '' }} 
                 {{ request()->is('admin/skills/create') ? 'active' : '' }}
                 {{ request()->is('admin/skills/*/edit') ? 'active' : '' }}">
                 <a href="{{ route('skills.index') }}"><i class="fa fa-th-large"></i>
                     <span>Skills</span>
                 </a>
             </li>
-            {{-- <li
-                class="has-sub {{ request()->is('admin/portfolios') ? 'active' : '' }} 
+            {{-- <li class="has-sub {{ request()->is('admin/portfolios') ? 'active' : '' }} 
                 {{ request()->is('admin/portfolios/create') ? 'active' : '' }}
                 {{ request()->is('admin/portfolios/*/edit') ? 'active' : '' }}">
                 <a href="{{ route('portfolios.index') }}"><i class="fa fa-th-large"></i>
                     <span>Portfolios</span>
                 </a>
             </li> --}}
-            <li
-                class="has-sub {{ request()->is('admin/portfolio') ? 'active' : '' }} 
+            <li class="has-sub {{ request()->is('admin/portfolio') ? 'active' : '' }} 
                         {{ request()->is('admin/portfolio/create') ? 'active' : '' }}
                         {{ request()->is('admin/portfolio/*/edit') ? 'active' : '' }}
                         {{ request()->is('admin/category') ? 'active' : '' }} 
@@ -68,14 +71,12 @@
                     <span>Portfolios</span>
                 </a>
                 <ul class="sub-menu">
-                    <li
-                        class="{{ request()->is('admin/category') ? 'active' : '' }} 
+                    <li class="{{ request()->is('admin/category') ? 'active' : '' }} 
                             {{ request()->is('admin/category/create') ? 'active' : '' }}
                             {{ request()->is('admin/category/*/edit') ? 'active' : '' }}">
                         <a href="{{ route('category.index') }}">Category</a>
                     </li>
-                    <li
-                        class="{{ request()->is('admin/portfolio') ? 'active' : '' }} 
+                    <li class="{{ request()->is('admin/portfolio') ? 'active' : '' }} 
                             {{ request()->is('admin/portfolio/create') ? 'active' : '' }}
                             {{ request()->is('admin/portfolio/*/edit') ? 'active' : '' }}">
                         <a href="{{ route('portfolio.index') }}">
@@ -84,8 +85,7 @@
                     </li>
                 </ul>
             </li>
-            <li
-                class="has-sub {{ request()->is('admin/cv-and-resume') ? 'active' : '' }} 
+            <li class="has-sub {{ request()->is('admin/cv-and-resume') ? 'active' : '' }} 
                 {{ request()->is('admin/cv-and-resume/create') ? 'active' : '' }}
                 {{ request()->is('admin/cv-and-resume/*/edit') ? 'active' : '' }}">
                 <a href="{{ route('cv-and-resume.index') }}"><i class="fa fa-th-large"></i>
@@ -104,7 +104,8 @@
                 </ul>
             </li> --}}
             <!-- begin sidebar minify button -->
-            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i
+                        class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
         </ul>
         <!-- end sidebar nav -->

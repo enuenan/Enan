@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\{
     SettingsController,
     PortfolioController,
     CVAndResmeController,
+    CompanyController,
 };
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_enan']], function () {
@@ -18,6 +19,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_enan']], functio
     Route::resource('skills', SkillController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('portfolio', PortfolioController::class);
+    Route::resource('companies', CompanyController::class);
     Route::resource('cv-and-resume', CVAndResmeController::class);
 
     // SETTINGS START

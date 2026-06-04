@@ -8,6 +8,7 @@ use Database\Seeders\AboutSeeder;
 use Database\Seeders\SkillSeeder;
 use Database\Seeders\CategorySeeder;
 use Database\Seeders\PortfolioSeeder;
+use Database\Seeders\CompanySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
             SkillSeeder::class,
             CategorySeeder::class,
             PortfolioSeeder::class,
+            CompanySeeder::class,
         ]);
     }
 }

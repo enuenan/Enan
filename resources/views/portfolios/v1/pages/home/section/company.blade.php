@@ -1,5 +1,5 @@
 @php
-    $companies = collect([
+    $companiesData = $companies ?? collect([
         [
             'image' => 'portfolio/assets/img/talent_pro-removedbg.png',
             'name' => 'Talent Pro',
@@ -41,13 +41,14 @@
     <div class="container">
         <div class="journal-block">
             <div class="row">
-                @foreach ($companies as $company)
+                @foreach ($companiesData as $company)
                     <div class="col-lg-4 col-md-6">
                         <div class="journal-info">
 
                             <div class="glass {{ $loop->first ? 'border-success' : '' }}">
                                 <a href="{{ $company['link'] }}" target="_blank">
-                                    <img src="{{ asset($company['image']) }}" class="img-fluid mx-auto d-block" style="height: 200px;" alt="img">
+                                    <img src="{{ asset($company['image']) }}" class="img-fluid mx-auto d-block"
+                                        style="height: 200px;" alt="img">
                                 </a>
                             </div>
 
@@ -63,7 +64,8 @@
                                     {{ $company['period'] }}
                                     <br>
                                     @foreach (explode(', ', $company['keywords']) as $keyword)
-                                        <span class="badge rounded-pill" style="background-color: #198754b5; font-weight: 100 !important;">
+                                        <span class="badge rounded-pill"
+                                            style="background-color: #198754b5; font-weight: 100 !important;">
                                             {{ $keyword }}
                                         </span>
                                     @endforeach

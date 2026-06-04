@@ -8,6 +8,7 @@ use App\Models\Admin\Category;
 use App\Models\Admin\CvAndResume;
 use App\Models\Admin\Portfolio;
 use App\Models\Admin\Skill;
+use App\Models\Admin\Company;
 
 class PortfolioController extends Controller
 {
@@ -25,10 +26,11 @@ class PortfolioController extends Controller
         $portfolios = Portfolio::all();
         $categories = Category::all();
         $cv_and_resume = CvAndResume::latest()->first();
+        $companies = Company::all();
 
         return view(
             $this->viewNamespace . '::pages.home.index',
-            compact('skills', 'about', 'portfolios', 'cv_and_resume', 'categories')
+            compact('skills', 'about', 'portfolios', 'cv_and_resume', 'categories', 'companies')
         );
     }
 
