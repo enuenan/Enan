@@ -4,27 +4,27 @@
         <div class="socials-media text-center">
             <ul class="list-unstyled">
                 <li class="mx-2">
-                    <a href="https://github.com/enuenan" target="_blank">
+                    <a href="{{ config('portfolio.social_links.github') }}" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
                 </li>
                 <li class="mx-2">
-                    <a href="https://www.facebook.com/moammerfarshidenan" target="_blank">
+                    <a href="{{ config('portfolio.social_links.facebook') }}" target="_blank">
                         <i class="bi bi-facebook"></i>
                     </a>
                 </li>
                 <li class="mx-2">
-                    <a href="https://twitter.com/MoammerEnan" target="_blank">
+                    <a href="{{ config('portfolio.social_links.twitter') }}" target="_blank">
                         <i class="bi bi-twitter"></i>
                     </a>
                 </li>
                 <li class="mx-2">
-                    <a href="https://www.instagram.com/__ennaaaa__/" target="_blank">
+                    <a href="{{ config('portfolio.social_links.instagram') }}" target="_blank">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </li>
                 <li class="mx-2">
-                    <a href="https://www.linkedin.com/in/moammer-farshid/" target="_blank">
+                    <a href="{{ config('portfolio.social_links.linkedin') }}" target="_blank">
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </li>
