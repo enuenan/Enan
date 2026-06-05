@@ -12,22 +12,22 @@
                             <li><span>House No. 18, Lane 15</span></li>
                             <li><span>Benarashi Palli, Dhaka</span></li>
                             <li>
-                                <a href="https://wa.me/{{ config('portfolio.social_links.whatsapp') }}"
+                                <a href="https://wa.me/{{ config('portfolio.social_links.whatsapp', '+8801881697754') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="Click to whatsapp me">
                                     <i class="bi bi-whatsapp" style="font-size: 20px;"></i>
                                 </a> &nbsp;
-                                <a href="https://t.me/{{ config('portfolio.social_links.telegram') }}"
+                                <a href="https://t.me/{{ config('portfolio.social_links.telegram', 'Enan54') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="Click to telegram me">
                                     <i class="bi bi-telegram" style="font-size: 20px;"></i>
                                 </a> &nbsp;
-                                <a href="tel:{{ config('portfolio.social_links.phone_number') }}"
+                                <a href="tel:{{ config('portfolio.social_links.phone_number', '+8801881697754') }}"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="Click to call me">
                                     <i class="bi bi-telephone" style="font-size: 20px;"></i>
                                     +88 01881697754
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:{{ config('portfolio.social_links.email') }}" data-bs-toggle="tooltip"
+                                <a href="mailto:{{ config('portfolio.social_links.email', 'emoammerfershid@gmail.com') }}" data-bs-toggle="tooltip"
                                     data-bs-placement="top" title="Click to mail me">
                                     <i class="bi bi-mailbox2" style="font-size: 20px;"></i> Mail me
                                 </a>

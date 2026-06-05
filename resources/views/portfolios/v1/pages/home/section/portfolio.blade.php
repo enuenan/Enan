@@ -1,4 +1,4 @@
-<div id="portfolio" class="paddsection">
+<div id="portfolio" class="paddsection mb-5 clearfix" style="position: relative; z-index: 1; padding-bottom: 110px;">
 
     <div class="container">
         <div class="section-title text-center">
@@ -43,7 +43,7 @@
 
         <div class="container mx-auto">
             <div class="journal-block">
-                <div class="row portfolio-container d-flex gap-2 justify-content-center">
+                <div class="row portfolio-container d-flex gap-2 justify-content-center" style="position: relative;">
                     @foreach ($portfolios as $portfolio)
                         <div
                             class="col-lg-4 col-md-6 glass portfolio-item filter-{{ $portfolio->category ? $portfolio->category->name : 'no-category' }}">
@@ -51,7 +51,7 @@
                                 alt="{{ $portfolio->name }} - portfolio screenshot" loading="lazy">
                             <div class="journal-txt pt-4 ps-1">
                                 <h4>
-                                    <a href="http://www.edventurebd.com/" target="_blank" rel="noopener noreferrer">
+                                    <a href="{{ $portfolio->project_url ?? 'http://www.edventurebd.com/' }}" target="_blank" rel="noopener noreferrer">
                                         {{ $portfolio->name }} <i class="fa-solid fa-up-right-from-square"></i>
                                     </a>
                                 </h4>
@@ -62,6 +62,7 @@
                         </div>
                     @endforeach
                 </div>
+                <div class="portfolio-section-clear w-100" style="clear: both; display: block; height: 1px;"></div>
             </div>
         </div>
     </div>

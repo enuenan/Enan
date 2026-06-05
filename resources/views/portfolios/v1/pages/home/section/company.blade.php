@@ -27,7 +27,7 @@
     ]);
 @endphp
 
-<div id="journal" class="text-left paddsection">
+<div id="companies" class="text-left paddsection clearfix" style="clear: both; position: relative; z-index: 2; padding-top: 120px; border-top: 1px solid rgba(16,111,23,.12);">
 
     <div class="container">
         <div class="section-title text-center">

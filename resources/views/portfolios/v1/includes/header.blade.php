@@ -19,7 +19,7 @@
                     <a class="nav-link  scrollto" href="#portfolio" style="color: #106f17 !important">Portfolio</a>
                 </li>
                 <li>
-                    <a class="nav-link  scrollto" href="#journal" style="color: #106f17 !important">Personal Work</a>
+                    <a class="nav-link  scrollto" href="#personal-work" style="color: #106f17 !important">Personal Work</a>
                 </li>
                 <li><a class="nav-link scrollto" href="#contact" style="color: #106f17 !important">Contact</a></li>
             </ul>

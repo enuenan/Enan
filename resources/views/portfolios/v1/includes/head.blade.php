@@ -18,10 +18,9 @@
 <link href="{{ asset('portfolio/assets/css/style.css') }}" rel="stylesheet">
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-
 <style>
     i {
-        color: #106f17 !important
+        color: #106f17 !important;
     }
 
     .progress {
@@ -39,27 +38,18 @@
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.125);
     }
-</style>
 
-
-<style>
-    i {
-        color: #106f17 !important
+    #companies {
+        clear: both;
     }
 
-    .progress {
-        height: 0.5rem !important;
+    #journal {
+        clear: both;
     }
 
-    .iconify {
-        font-size: 44px;
-    }
-
-    .glass {
-        backdrop-filter: blur(12px) saturate(105%);
-        -webkit-backdrop-filter: blur(12px) saturate(105%);
-        background-color: rgba(16, 111, 23, 0.07);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125);
+    .portfolio-container::after {
+        content: "";
+        display: block;
+        clear: both;
     }
 </style>

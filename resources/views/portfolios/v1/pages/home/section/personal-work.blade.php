@@ -34,7 +34,7 @@
     ]);
 @endphp
 
-<div id="journal" class="text-left paddsection">
+<div id="personal-work" class="text-left paddsection">
 
     <div class="container">
         <div class="section-title text-center">

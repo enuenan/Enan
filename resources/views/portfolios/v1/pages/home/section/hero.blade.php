@@ -8,28 +8,28 @@
 
             <ul class="list-unstyled list-social">
                 <li>
-                    <a href="{{ config('portfolio.social_links.github') }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ config('portfolio.social_links.github', 'https://github.com/enuenan') }}" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-github"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ config('portfolio.social_links.facebook') }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ config('portfolio.social_links.facebook', 'https://www.facebook.com/moammerfarshidenan') }}" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ config('portfolio.social_links.twitter') }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ config('portfolio.social_links.twitter', 'https://twitter.com/MoammerEnan') }}" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ config('portfolio.social_links.instagram') }}" target="_blank"
+                    <a href="{{ config('portfolio.social_links.instagram', 'https://www.instagram.com/__ennaaaa__/') }}" target="_blank"
                         rel="noopener noreferrer">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ config('portfolio.social_links.linkedin') }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ config('portfolio.social_links.linkedin', 'https://www.linkedin.com/in/moammer-farshid/') }}" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </li>
