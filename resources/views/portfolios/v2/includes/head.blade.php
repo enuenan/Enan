@@ -8,8 +8,7 @@
 
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-{{-- Icon libraries kept because existing DB/content outputs Bootstrap Icons, Boxicons, FontAwesome, and Iconify markup.
---}}
+{{-- Icon libraries kept because existing DB/content outputs Bootstrap Icons, Boxicons, FontAwesome, and Iconify markup. --}}
 <link href="{{ asset('portfolio/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 <link href="{{ asset('portfolio/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
@@ -25,28 +24,12 @@
         scroll-behavior: smooth;
     }
 
-    ::-webkit-scrollbar {
-        width: 0;
+    body {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     }
 
-    .swiper-pagination-bullet {
-        background: rgba(255, 255, 255, 0.7) !important;
-        opacity: 1 !important;
-    }
-
-    .swiper-pagination-bullet-active {
-        background: #6ee7b7 !important;
-    }
-
-    .filter-active {
-        background: #6ee7b7;
-        color: #020617;
-    }
-</style>
-
-<style>
-    html {
-        scroll-behavior: smooth;
+    .font-display {
+        font-family: "Playfair Display", ui-serif, Georgia, serif;
     }
 
     ::-webkit-scrollbar {

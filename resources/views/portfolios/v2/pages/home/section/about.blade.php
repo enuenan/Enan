@@ -5,7 +5,7 @@
                 <div class="relative">
                     <div class="absolute -inset-4 rounded-[2.5rem] bg-emerald-300/10 blur-xl"></div>
                     <div class="relative rotate-[-2deg] overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl transition hover:rotate-0">
-                        <img src="{{ $about->image }}" class="h-[440px] w-full rounded-[1.5rem] object-cover" alt="me">
+                        <img src="{{ $about->image ?? asset('portfolio/assets/img/pixomatic_1702137054794.png') }}" class="h-[440px] w-full rounded-[1.5rem] object-cover" alt="me">
                     </div>
                 </div>
             </div>
@@ -13,10 +13,10 @@
             <div class="lg:col-span-7">
                 <p class="mb-4 text-sm font-black uppercase tracking-[0.25em] text-emerald-300">About me</p>
                 <h2 class="font-display text-4xl font-black leading-tight text-white md:text-6xl">
-                    {{ $about->title }}
+                    {{ $about->title ?? 'Laravel developer building clean web products.' }}
                 </h2>
                 <p class="mt-8 text-justify text-lg leading-9 text-slate-300">
-                    {{ $about->description }}
+                    {{ $about->description ?? 'I build secure, maintainable, and scalable web applications with Laravel and modern frontend tools.' }}
                 </p>
 
                 <div class="mt-10 grid gap-4 sm:grid-cols-3">

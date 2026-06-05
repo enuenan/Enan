@@ -1,16 +1,15 @@
 @php
     use Illuminate\Support\Str;
+
     $social = config('portfolio.social_links', []);
     $sameAs = [];
+
     foreach ($social as $s) {
         if (is_string($s) && Str::startsWith($s, ['http://', 'https://'])) {
             $sameAs[] = $s;
         }
     }
-@endphp
 
-<!-- JSON-LD Person -->
-@php
     $jsonLd = [
         '@context' => 'https://schema.org',
         '@type' => 'Person',
