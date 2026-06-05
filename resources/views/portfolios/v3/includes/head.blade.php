@@ -28,18 +28,16 @@
     ::-webkit-scrollbar {
         width: 0;
     }
-</style>
 
-<style>
-    body {
-        font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #171717;
+        background: #ffffff;
+        opacity: 1;
     }
 
-    .font-display {
-        font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-    }
-
-    ::-webkit-scrollbar {
-        width: 0;
+    .swiper-pagination-bullet-active {
+        background: #fb923c;
     }
 </style>

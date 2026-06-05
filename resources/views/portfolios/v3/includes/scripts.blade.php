@@ -66,7 +66,15 @@
         }
 
         if (window.Isotope && document.querySelector('.portfolio-container')) {
+            document.querySelectorAll('#portfolio-flters li.filter-active').forEach(function (item) {
+                item.classList.add('bg-orange-400', 'text-neutral-950');
+                item.classList.remove('bg-white', 'text-neutral-800');
+            });
+
             const iso = new Isotope('.portfolio-container', { itemSelector: '.portfolio-item', layoutMode: 'fitRows' });
+            window.addEventListener('load', function () {
+                iso.layout();
+            });
             document.querySelectorAll('#portfolio-flters li').forEach(function (filter) {
                 filter.addEventListener('click', function () {
                     document.querySelectorAll('#portfolio-flters li').forEach(function (item) {

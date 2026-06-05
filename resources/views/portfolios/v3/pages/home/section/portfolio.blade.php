@@ -13,7 +13,7 @@
             <ul id="portfolio-flters"
                 class="flex max-w-5xl flex-wrap justify-center gap-3 rounded-2xl border-2 border-neutral-950 bg-white p-3 shadow-[6px_6px_0_#111827]">
                 <li data-filter="*"
-                    class="cursor-pointer rounded-xl border-2 border-neutral-950 bg-orange-400 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-neutral-950">
+                    class="filter-active cursor-pointer rounded-xl border-2 border-neutral-950 bg-orange-400 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-neutral-950">
                     All</li>
                 @foreach ($categories as $category)
                     <li data-filter=".filter-{{ $category->name }}"
