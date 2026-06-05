@@ -40,19 +40,19 @@
             </div>
 
             <ul class="mt-10 flex flex-wrap gap-3">
-                <li><a href="{{ config('portfolio.social_links.github') }}" target="_blank"
+                <li><a href="{{ config('portfolio.social_links.github') }}" target="_blank" rel="noopener noreferrer"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-300 hover:text-slate-950"
                         aria-label="GitHub"><i class="bi bi-github"></i></a></li>
-                <li><a href="{{ config('portfolio.social_links.facebook') }}" target="_blank"
+                <li><a href="{{ config('portfolio.social_links.facebook') }}" target="_blank" rel="noopener noreferrer"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-300 hover:text-slate-950"
                         aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="{{ config('portfolio.social_links.twitter') }}" target="_blank"
+                <li><a href="{{ config('portfolio.social_links.twitter') }}" target="_blank" rel="noopener noreferrer"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-300 hover:text-slate-950"
                         aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
-                <li><a href="{{ config('portfolio.social_links.instagram') }}" target="_blank"
+                <li><a href="{{ config('portfolio.social_links.instagram') }}" target="_blank" rel="noopener noreferrer"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-300 hover:text-slate-950"
                         aria-label="Instagram"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="{{ config('portfolio.social_links.linkedin') }}" target="_blank"
+                <li><a href="{{ config('portfolio.social_links.linkedin') }}" target="_blank" rel="noopener noreferrer"
                         class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white transition hover:-translate-y-1 hover:border-emerald-300/40 hover:bg-emerald-300 hover:text-slate-950"
                         aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
             </ul>

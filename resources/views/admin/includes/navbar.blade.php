@@ -1,7 +1,8 @@
 <div id="header" class="header navbar-default">
     <!-- begin navbar-header -->
     <div class="navbar-header">
-        <a href="{{ route('/') }}" class="navbar-brand" target="_blank" id="homeLink" data-toggle="tooltip" data-placement="top" title="View Website">
+        <a href="{{ route('/') }}" class="navbar-brand" target="_blank" rel="noopener noreferrer" id="homeLink"
+            data-toggle="tooltip" data-placement="top" title="View Website">
             <img src="{{ asset('portfolio/assets/img/LogoMakr.png') }}" class="img-fluid" width="40%">
             Portfolio
         </a>
@@ -17,12 +18,13 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown navbar-user">
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-thumnail" alt="" height="150" width="200">
+                <img src="{{ asset('portfolio/assets/img/LogoMakr-4CEFtI.png') }}" class="img-thumnail" alt=""
+                    height="150" width="200">
                 <span class="d-none d-md-inline">{{ session()->get('userName') }}</span>
                 <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="{{ route('/') }}" class="dropdown-item" target="_blank"">
+                <a href="{{ route('/') }}" class="dropdown-item" target="_blank" rel="noopener noreferrer">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Open app
                 </a>
                 <a href="{{ route('settings') }}" class="dropdown-item">
@@ -31,7 +33,8 @@
                 <div class="dropdown-divider"></div>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); this.closest('form').submit();">
                         <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                         {{ __('Logout') }}

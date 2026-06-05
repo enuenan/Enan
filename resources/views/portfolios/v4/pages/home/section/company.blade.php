@@ -17,13 +17,13 @@
                 <div>
                     <div
                         class="rounded-xl border border-white/20 bg-[#106f17]/[0.07] p-0 backdrop-blur-xl {{ $loop->first ? 'border-[#198754]' : '' }}">
-                        <a href="{{ $company['link'] }}" target="_blank" class="block"><img
+                        <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer" class="block"><img
                                 src="{{ asset($company['image']) }}"
                                 class="mx-auto block h-[200px] max-w-full object-contain" alt="img"></a>
                     </div>
                     <div class="py-[25px] text-center">
                         <h4 class="m-0 text-sm font-semibold text-[#292929]"><a href="{{ $company['link'] }}"
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 class="block text-[19px] font-medium leading-6 text-[#292929] transition hover:text-[#106f17]">{{ $company['name'] }}</a>
                         </h4>
                         <p class="m-0 text-sm leading-6 text-[#999]">

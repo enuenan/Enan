@@ -58,12 +58,12 @@
                             <td>{{ $portfolio->client }}</td>
                             <td>{{ $portfolio->project_date }}</td>
                             <td>
-                                <a href="{{ $portfolio->git_url }}" target="_blank">
+                                <a href="{{ $portfolio->git_url }}" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-square-github"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ $portfolio->project_url }}" target="_blank">
+                                <a href="{{ $portfolio->project_url }}" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-solid fa-up-right-from-square"></i>
                                 </a>
                             </td>

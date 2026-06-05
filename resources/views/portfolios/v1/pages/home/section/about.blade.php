@@ -5,7 +5,8 @@
             <div class="col-lg-4 ">
                 <div class="div-img-bg">
                     <div class="about-img">
-                        <img src="{{ $about->image }}" class="img-responsive" alt="me">
+                        <img src="{{ $about->image }}" class="img-responsive" alt="Moammer Farshid Enan profile photo"
+                            loading="lazy">
                     </div>
                 </div>
             </div>

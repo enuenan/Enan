@@ -46,7 +46,7 @@
                         <div class="journal-info">
 
                             <div class="glass {{ $loop->first ? 'border-success' : '' }}">
-                                <a href="{{ $company['link'] }}" target="_blank">
+                                <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer">
                                     <img src="{{ asset($company['image']) }}" class="img-fluid mx-auto d-block"
                                         style="height: 200px;" alt="img">
                                 </a>
@@ -54,7 +54,7 @@
 
                             <div class="journal-txt text-center">
                                 <h4>
-                                    <a href="{{ $company['link'] }}" target="_blank">
+                                    <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer">
                                         {{ $company['name'] }}
                                     </a>
                                 </h4>

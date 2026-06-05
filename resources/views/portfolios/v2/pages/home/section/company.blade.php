@@ -41,14 +41,14 @@
                     <div
                         class="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-emerald-300/10 blur-3xl transition group-hover:bg-emerald-300/20">
                     </div>
-                    <a href="{{ $company['link'] }}" target="_blank"
+                    <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer"
                         class="relative flex h-56 items-center justify-center rounded-[1.5rem] border border-white/10 bg-white p-8">
                         <img src="{{ asset($company['image']) }}" class="max-h-40 w-auto object-contain"
                             alt="{{ $company['name'] }}">
                     </a>
                     <div class="relative pt-7">
                         <h3 class="text-2xl font-black text-white">
-                            <a href="{{ $company['link'] }}" target="_blank"
+                            <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer"
                                 class="transition hover:text-emerald-300">{{ $company['name'] }}</a>
                         </h3>
                         <p class="mt-3 text-sm font-semibold text-emerald-200">{{ $company['worked_as'] }}</p>

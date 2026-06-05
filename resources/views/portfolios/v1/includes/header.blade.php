@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <a href="{{ URL::to('/') }}" class="logo">
-            <img src="{{ asset('portfolio/assets/img/LogoMakr.png') }}" alt="" class="img-fluid">
+            <img src="{{ asset('portfolio/assets/img/LogoMakr.png') }}" alt="Moammer Farshid Enan" class="img-fluid">
         </a>
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->

@@ -44,12 +44,12 @@
         <div class="grid gap-8 lg:grid-cols-2">
             @foreach ($personal_works as $personal_work)
                 <article class="group overflow-hidden rounded-[2rem] border-2 border-neutral-950 bg-white shadow-[9px_9px_0_#111827] transition hover:-translate-y-2">
-                    <a href="{{ $personal_work['link'] }}" target="_blank" class="block overflow-hidden border-b-2 border-neutral-950">
+                    <a href="{{ $personal_work['link'] }}" target="_blank" rel="noopener noreferrer" class="block overflow-hidden border-b-2 border-neutral-950">
                         <img src="{{ asset($personal_work['image']) }}" class="h-80 w-full object-cover transition duration-700 group-hover:scale-105" alt="{{ $personal_work['title'] }}">
                     </a>
                     <div class="p-8">
                         <h3 class="font-display text-3xl font-black text-neutral-950">
-                            <a href="{{ $personal_work['link'] }}" target="_blank" class="hover:text-orange-600">{{ $personal_work['title'] }}</a>
+                            <a href="{{ $personal_work['link'] }}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-600">{{ $personal_work['title'] }}</a>
                         </h3>
                         <p class="mt-4 text-base font-medium leading-8 text-neutral-600">{{ $personal_work['description'] }}</p>
                         <div class="mt-6 flex gap-3">

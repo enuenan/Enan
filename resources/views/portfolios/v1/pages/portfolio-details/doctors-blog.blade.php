@@ -23,15 +23,15 @@
                             <div class="swiper-wrapper align-items-center">
 
                                 <div class="swiper-slide">
-                                    <img src="../assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                                    <img src="../assets/img/portfolio/portfolio-details-1.jpg" alt="Doctors Blog project screenshot 1" loading="lazy">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                                    <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="Doctors Blog project screenshot 2" loading="lazy">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                                    <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="Doctors Blog project screenshot 3" loading="lazy">
                                 </div>
 
                             </div>

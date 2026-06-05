@@ -40,13 +40,13 @@ $companiesData = $companies ?? collect([
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($companiesData as $company)
                 <article class="group rounded-4xl border-2 border-neutral-950 bg-white p-6 shadow-[8px_8px_0_#111827] transition hover:-translate-y-2 {{ $loop->first ? 'bg-lime-100' : '' }}">
-                    <a href="{{ $company['link'] }}" target="_blank" class="flex h-56 items-center justify-center rounded-[1.5rem] border-2 border-neutral-950 bg-[#fffaf0] p-8 transition group-hover:bg-cyan-100">
-                        <img src="{{ asset($company['image']) }}" class="max-h-40 w-auto object-contain" alt="{{ $company['name'] }}">
-                    </a>
+                        <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer" class="flex h-56 items-center justify-center rounded-[1.5rem] border-2 border-neutral-950 bg-[#fffaf0] p-8 transition group-hover:bg-cyan-100">
+                            <img src="{{ asset($company['image']) }}" class="max-h-40 w-auto object-contain" alt="{{ $company['name'] }}">
+                        </a>
                     <div class="pt-7">
                         <p class="text-xs font-black uppercase tracking-[0.18em] text-orange-600">{{ $company['period'] }}</p>
                         <h3 class="font-display mt-3 text-3xl font-black text-neutral-950">
-                            <a href="{{ $company['link'] }}" target="_blank" class="hover:text-orange-600">{{ $company['name'] }}</a>
+                               <a href="{{ $company['link'] }}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-600">{{ $company['name'] }}</a>
                         </h3>
                         <p class="mt-2 text-base font-black text-neutral-700">{{ $company['worked_as'] }}</p>
                         <div class="mt-5 flex flex-wrap gap-2">

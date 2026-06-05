@@ -49,17 +49,18 @@
             <div class="row">
 
                 @foreach ($personal_works as $personal_work)
-                    <div class="col-md-6 mt-1" style="he">
+                    <div class="col-md-6 mt-1">
                         <div class="journal-info">
                             <div class="glass p-2">
 
-                                <a href="{{ $personal_work['link'] }}" target="_blank">
-                                    <img src="{{ asset($personal_work['image']) }}" class="img-fluid" alt="img">
+                                <a href="{{ $personal_work['link'] }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ asset($personal_work['image']) }}" class="img-fluid"
+                                        alt="{{ $personal_work['title'] }}" loading="lazy">
                                 </a>
 
                                 <div class="journal-txt">
                                     <h4>
-                                        <a href="{{ $personal_work['link'] }}" target="_blank">
+                                        <a href="{{ $personal_work['link'] }}" target="_blank" rel="noopener noreferrer">
                                             {{ $personal_work['title'] }}
                                         </a>
                                     </h4>
@@ -69,18 +70,20 @@
                                     <div class="d-flex mt-1">
                                         @if (!empty($personal_work['social']))
                                             @foreach ($personal_work['social'] as $social)
-                                                <a href="{{ $social['link'] }}" class="me-2" target="_blank" rel="noopener noreferrer"
-                                                    title="{{ $social['title'] }}">
-                                                    <img src="{{ $social['icon'] }}" alt="" class="img-fluid" srcset=""
-                                                        style="height: 35px; width: 35px;">
+                                                <a href="{{ $social['link'] }}" class="me-2" target="_blank"
+                                                    rel="noopener noreferrer" title="{{ $social['title'] }}">
+                                                    <img src="{{ $social['icon'] }}" alt="{{ $social['title'] }}" class="img-fluid"
+                                                        srcset="" style="height: 35px; width: 35px;" loading="lazy">
                                                 </a>
                                             @endforeach
                                         @endif
                                     </div>
-                                    {{-- <iframe src="https://drive.google.com/file/d/1OSOLw_BRKkpQLwhcfqLU8RL3TyxHuHqA/preview" width="640" height="480"
-                                    allow="autoplay"></iframe> --}}
-                                    {{-- <iframe src="https://drive.google.com/file/d/18F6DPRgEEku2kS0shYVgwpJtHgpFIaLs/preview" width="640" height="480"
-                                    allow="autoplay"></iframe> --}}
+                                    {{-- <iframe
+                                        src="https://drive.google.com/file/d/1OSOLw_BRKkpQLwhcfqLU8RL3TyxHuHqA/preview"
+                                        width="640" height="480" allow="autoplay"></iframe> --}}
+                                    {{-- <iframe
+                                        src="https://drive.google.com/file/d/18F6DPRgEEku2kS0shYVgwpJtHgpFIaLs/preview"
+                                        width="640" height="480" allow="autoplay"></iframe> --}}
                                 </div>
                             </div>
                         </div>

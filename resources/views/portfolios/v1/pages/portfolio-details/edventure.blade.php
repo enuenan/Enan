@@ -24,17 +24,17 @@
 
                                 <div class="swiper-slide">
                                     <img src="{{ asset('portfolio/assets/img/portfolio/portfolio-details-1.jpg') }}"
-                                        alt="">
+                                        alt="Edventure project screenshot 1" loading="lazy">
                                 </div>
 
                                 <div class="swiper-slide">
                                     <img src="{{ asset('portfolio/assets/img/portfolio/portfolio-details-2.jpg') }}"
-                                        alt="">
+                                        alt="Edventure project screenshot 2" loading="lazy">
                                 </div>
 
                                 <div class="swiper-slide">
                                     <img src="{{ asset('portfolio/assets/img/portfolio/portfolio-details-3.jpg') }}"
-                                        alt="">
+                                        alt="Edventure project screenshot 3" loading="lazy">
                                 </div>
 
                             </div>
