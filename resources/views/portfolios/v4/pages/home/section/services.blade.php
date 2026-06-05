@@ -1,4 +1,4 @@
-<section id="services" class="bg-[#f7f7f7] pb-20">
+<section id="services" class="bg-[#f7f7f7] py-[90px] pb-20">
     <div class="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8">
         <h3 class="mb-4 text-[25px] font-semibold text-[#292929]"><span class="underline decoration-[#106f17] underline-offset-4" style="color: #106f17 !important">Skilled</span> at below stack</h3>
         <div class="services-slider swiper-container overflow-hidden" data-aos="fade-up" data-aos-delay="100">

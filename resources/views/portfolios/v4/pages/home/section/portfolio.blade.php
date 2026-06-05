@@ -1,4 +1,4 @@
-<section id="portfolio" class="relative py-[90px] pb-[50px]">
+<section id="portfolio" class="relative z-10 clear-both border-b border-[#106f17]/10 bg-white py-[90px] pb-[110px]">
     <div class="mx-auto max-w-[1140px] px-4 sm:px-6 lg:px-8">
         <div class="mb-[70px] text-center">
             <h2 class="text-[25px] font-semibold uppercase tracking-[2px] text-[#292929]">My <span
@@ -14,7 +14,7 @@
                     {{ $category->name }}</li>@endforeach
             </ul>
         </div>
-        <div class="portfolio-container -mx-1 flex flex-wrap justify-center gap-2">
+        <div class="portfolio-container relative flex min-h-[320px] flex-wrap justify-center gap-2">
             @foreach ($portfolios as $portfolio)
                 <div
                     class="portfolio-item filter-{{ $portfolio->category ? $portfolio->category->name : 'no-category' }} mb-[30px] w-full rounded-xl border border-white/20 bg-[#106f17]/[0.07] p-2 backdrop-blur-xl transition md:w-[48%] lg:w-[32%]">

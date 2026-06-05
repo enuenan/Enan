@@ -16,3 +16,29 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
 <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border: 1px solid #106f17;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #106f17;
+    }
+
+    .filter-active {
+        color: #106f17 !important;
+    }
+</style>

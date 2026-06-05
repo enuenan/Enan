@@ -3,15 +3,15 @@
         <div class="grid items-center justify-between gap-10 lg:grid-cols-12">
             <div class="lg:col-span-4">
                 <div class="border-[20px] border-[#b8a07e] pb-[30px] max-lg:border-0 max-lg:pb-0"><img
-                        src="{{ $about->image }}"
+                        src="{{ $about->image ?? asset('portfolio/assets/img/pixomatic_1702137054794.png') }}"
                         class="ml-10 mt-[-60px] h-[400px] w-full object-cover shadow-[0_0_85px_0_rgba(0,0,0,0.14)] max-lg:ml-0 max-lg:mt-0"
                         alt="Moammer Farshid Enan profile photo" loading="lazy"></div>
             </div>
             <div class="lg:col-span-7">
                 <p class="m-0 font-['Playfair_Display',serif] text-[28px] leading-snug text-[#292929] max-lg:text-xl">
-                    {{ $about->title }}</p>
+                    {{ $about->title ?? 'Laravel developer building clean web products.' }}</p>
                 <p class="mb-0 mt-[25px] max-w-[80%] text-justify text-[15px] leading-7 text-[#999] max-lg:max-w-full">
-                    {{ $about->description }}</p>
+                    {{ $about->description ?? 'I build secure, maintainable, and scalable web applications with Laravel and modern frontend tools.' }}</p>
             </div>
         </div>
     </div>
