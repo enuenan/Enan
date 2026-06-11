@@ -26,10 +26,19 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <li class="nav-header">Navigation</li>
-            <li class="has-sub {{ request()->is('admin/dashboard') ? 'active' : '' }}">
-                <a href="{{ route('admin.dashboard') }}"><i class="fa fa-th-large"></i>
+            <li class="has-sub {{ request()->is('admin/dashboard') || request()->is('admin/analytics') ? 'active' : '' }}">
+                <a href="javascript:;">
+                    <b class="caret"></b><i class="fa fa-th-large"></i>
                     <span>Dashboard</span>
                 </a>
+                <ul class="sub-menu">
+                    <li class="{{ request()->is('admin/dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}">Overview</a>
+                    </li>
+                    <li class="{{ request()->is('admin/analytics') ? 'active' : '' }}">
+                        <a href="{{ route('admin.analytics') }}">Analytics</a>
+                    </li>
+                </ul>
             </li>
             <li class="has-sub {{ request()->is('admin/about') ? 'active' : '' }} 
                 {{ request()->is('admin/about/create') ? 'active' : '' }}

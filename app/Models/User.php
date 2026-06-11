@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use MeShaon\RequestAnalytics\Contracts\CanAccessAnalyticsDashboard;
 
-class User extends Authenticatable
+class User extends Authenticatable implements CanAccessAnalyticsDashboard
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -42,4 +43,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Determine if the user can access the analytics dashboard.
+     * Only Super Admin (is_enan) users can access analytics.
+     */
+    public function canAccessAnalyticsDashboard(): bool
+    {
+        return $this->role === 'is_enan';
+    }
 }

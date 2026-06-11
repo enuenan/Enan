@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\{
     PortfolioController,
     CVAndResmeController,
     CompanyController,
+    AnalyticsController,
 };
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_enan']], function () {
@@ -22,11 +23,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_enan']], functio
     Route::resource('companies', CompanyController::class);
     Route::resource('cv-and-resume', CVAndResmeController::class);
 
+    // Analytics Route
+    Route::get('analytics', [AnalyticsController::class, 'index'])->name('admin.analytics');
+
     // SETTINGS START
     Route::get('settings', [SettingsController::class, 'settings'])->name('settings');
     Route::post('profile-settings/{id}', [SettingsController::class, 'profileSettings'])->name('profileSettings');
     Route::post('change-password/{id}', [SettingsController::class, 'changePassword'])->name('changePassword');
     // SETTINGS END
 });
-
-require __DIR__ . '/auth.php';
